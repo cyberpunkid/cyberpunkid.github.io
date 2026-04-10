@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apa Itu Malware Infostealer dan Kenapa Banyak Korban Tidak Menyadarinya — CyberpunkID</title>
+<meta name="description" content="Infostealer mencuri password, cookie, dan sesi browser Anda tanpa terdeteksi. Inilah cara kerjanya dan bagaimana melindungi diri.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@400;600;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/article.css">
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+<div class="reading-progress-bar" id="reading-progress"></div>
+<canvas id="starfield"></canvas>
+<div class="grid-overlay"></div>
+<div class="scanline"></div>
+<nav>
+  <div class="nav-logo">
+    <a href="../index.html" style="text-decoration:none;color:inherit" class="nav-logo-text">Cyber<span>_</span>PunkID</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="../index.html"><span data-i18n="nav_home">Beranda</span></a></li>
+    <li><a href="../works.html" class="active"><span data-i18n="nav_works">Tulisan</span></a></li>
+    <li><a href="../about.html"><span data-i18n="nav_about">Tentang</span></a></li>
+  </ul>
+  <button class="lang-toggle" onclick="toggleLang()" aria-label="Ganti bahasa">
+    <span data-lang="id" class="lang-active">ID</span><span class="lang-sep">|</span><span data-lang="en">EN</span>
+  </button>
+</nav>
+<article>
+  <div class="article-meta">
+    <span class="article-category" id="art-cat">Pengetahuan</span>
+    <span class="article-date" id="art-date">10 April 2026</span>
+    <span class="article-read-time" id="art-time">· 8 Menit Baca</span>
+  </div>
+  <h1 class="article-title" id="art-title">Apa Itu Malware Infostealer dan Kenapa Banyak Korban Tidak Menyadarinya</h1>
+  <p class="article-lead" id="art-lead">Infostealer adalah jenis malware yang bekerja dalam diam — mencuri password, cookie sesi, dan data browser Anda dalam hitungan detik tanpa gejala apapun. Saat Anda menyadarinya, semuanya sudah terlambat.</p>
+  <div class="article-divider"><span id="art-divider">// MULAI TRANSMISI</span></div>
+
+  <div class="article-body" id="body-id">
+    <h2>Apa Itu Infostealer?</h2>
+    <p>Infostealer adalah kategori malware yang dirancang khusus untuk mengekstrak data sensitif dari perangkat korban secepat mungkin. Tidak seperti ransomware yang dramatis (mengunci file dan meminta tebusan), infostealer bekerja tanpa suara — masuk, curi, keluar — tanpa meninggalkan jejak yang terlihat.</p>
+    <p>Nama-nama infostealer yang paling aktif dalam beberapa tahun terakhir: <strong>RedLine Stealer</strong>, <strong>Raccoon Stealer</strong>, <strong>Vidar</strong>, <strong>LummaC2</strong>, dan <strong>StealC</strong>. Semuanya dijual di dark web dengan model berlangganan, membuat siapapun bisa menjadi operator tanpa keahlian teknis tinggi.</p>
+
+    <div class="stat-grid">
+      <div class="stat-box"><span class="stat-num">1B+</span><span class="stat-desc">Kredensial dicuri infostealer pada 2024</span></div>
+      <div class="stat-box"><span class="stat-num">$10-300</span><span class="stat-desc">Harga sewa infostealer per bulan di dark web</span></div>
+      <div class="stat-box"><span class="stat-num">&lt;60 dtk</span><span class="stat-desc">Waktu infostealer mengekstrak data browser</span></div>
+    </div>
+
+    <h2>Apa yang Dicuri Infostealer?</h2>
+    <p>Dalam waktu kurang dari satu menit setelah terinstall, infostealer mampu mengekstrak:</p>
+    <ul>
+      <li><strong>Password tersimpan di browser</strong> — Chrome, Firefox, Edge, dan browser lain menyimpan password secara lokal. Infostealer langsung mengaksesnya</li>
+      <li><strong>Cookie sesi browser</strong> — ini yang paling berbahaya. Cookie sesi memungkinkan penyerang masuk ke akun Anda <em>tanpa perlu password atau MFA sama sekali</em></li>
+      <li><strong>Data autofill</strong> — nama, alamat, nomor kartu kredit yang tersimpan di browser</li>
+      <li><strong>Cryptocurrency wallet</strong> — file wallet dan seed phrase dari crypto wallet lokal</li>
+      <li><strong>File dokumen</strong> — screenshot, dokumen PDF, file dengan kata kunci tertentu (KTP, SIM, password)</li>
+      <li><strong>Data aplikasi</strong> — termasuk session token dari Discord, Telegram, dan aplikasi lain</li>
+    </ul>
+
+    <div class="callout callout-warning">
+      <div class="callout-label">// Cookie Theft: Ancaman Tersembunyi Terbesar</div>
+      <p>Jika penyerang punya cookie sesi akun YouTube Anda, mereka bisa langsung masuk dan mengambil alih channel tanpa tahu password Anda. Inilah kenapa banyak YouTuber kehilangan channel secara tiba-tiba — bukan passwordnya yang dicuri, tapi cookie sesinya.</p>
+    </div>
+
+    <h2>Bagaimana Infostealer Masuk ke Perangkat Anda?</h2>
+    <h3>1. Software Bajakan dan Crack</h3>
+    <p>Ini adalah vektor paling umum di Indonesia. File crack untuk Photoshop, Office, game, atau software lain sering dibundel dengan infostealer. Pengguna mengkira mereka mendapat software gratis, tapi sebenarnya membayar dengan data mereka.</p>
+
+    <h3>2. Malvertising</h3>
+    <p>Iklan berbahaya di mesin pencari yang meniru software populer. Ketika mencari "download OBS free" atau "VLC download", iklan di bagian atas Google bisa mengarah ke situs palsu yang mendistribusikan malware.</p>
+
+    <h3>3. Phishing Attachment</h3>
+    <p>File yang dikirim via email atau WhatsApp — PDF palsu, dokumen Word dengan macro berbahaya, atau file ZIP berisi executable berbahaya.</p>
+
+    <h3>4. YouTube Tutorial Palsu</h3>
+    <p>Tren baru: video tutorial yang menunjukkan cara mendapat software "gratis" dengan link di deskripsi yang sebenarnya adalah infostealer.</p>
+
+    <div class="callout">
+      <div class="callout-label">// Tanda-Tanda Infeksi</div>
+      <p>Biasanya tidak ada tanda yang jelas. Tapi perhatikan: login mencurigakan di akun Anda, notifikasi perubahan password yang tidak Anda lakukan, atau aktivitas tidak biasa di akun email dan media sosial.</p>
+    </div>
+
+    <h2>Cara Melindungi Diri dari Infostealer</h2>
+    <ol>
+      <li><strong>Jangan gunakan software bajakan</strong> — ini bukan pilihan, ini keharusan. Alternatif gratis dan legal selalu ada</li>
+      <li><strong>Download hanya dari sumber resmi</strong> — situs resmi developer, bukan mirror atau situs ketiga</li>
+      <li><strong>Gunakan antivirus yang diperbarui</strong> — Windows Defender sudah cukup baik jika selalu update</li>
+      <li><strong>Jangan simpan password di browser</strong> — gunakan password manager dedicated sebagai gantinya</li>
+      <li><strong>Logout dari akun penting</strong> setelah selesai menggunakan perangkat bersama atau tidak dikenal</li>
+      <li><strong>Aktifkan notifikasi login</strong> di semua akun penting — deteksi dini adalah kunci</li>
+      <li><strong>Waspada terhadap link download</strong> di YouTube, forum, dan grup chat</li>
+    </ol>
+
+    <h2>Jika Sudah Terinfeksi: Langkah Darurat</h2>
+    <ol>
+      <li>Cabut koneksi internet segera</li>
+      <li>Dari perangkat lain yang bersih, ganti password semua akun penting</li>
+      <li>Logout semua sesi aktif (Google, Facebook, dll. punya fitur ini)</li>
+      <li>Hubungi bank jika ada data kartu kredit di perangkat</li>
+      <li>Format ulang perangkat yang terinfeksi — jangan percaya bahwa antivirus sudah membersihkan semuanya</li>
+    </ol>
+  </div>
+
+  <div class="article-body" id="body-en" style="display:none">
+    <h2>What Is an Infostealer?</h2>
+    <p>An infostealer is a category of malware specifically designed to extract sensitive data from a victim's device as quickly as possible. Unlike ransomware (which is dramatic — locking files and demanding payment), infostealers work silently — enter, steal, exit — without leaving visible traces.</p>
+    <p>The most active infostealers in recent years: <strong>RedLine Stealer</strong>, <strong>Raccoon Stealer</strong>, <strong>Vidar</strong>, <strong>LummaC2</strong>, and <strong>StealC</strong>. All are sold on the dark web via subscription, making it possible for anyone to become an operator without advanced technical skills.</p>
+
+    <div class="stat-grid">
+      <div class="stat-box"><span class="stat-num">1B+</span><span class="stat-desc">Credentials stolen by infostealers in 2024</span></div>
+      <div class="stat-box"><span class="stat-num">$10-300</span><span class="stat-desc">Monthly rental price on dark web</span></div>
+      <div class="stat-box"><span class="stat-num">&lt;60 sec</span><span class="stat-desc">Time to extract all browser data</span></div>
+    </div>
+
+    <h2>What Do Infostealers Steal?</h2>
+    <ul>
+      <li><strong>Browser-saved passwords</strong> — Chrome, Firefox, Edge store passwords locally; infostealers access them directly</li>
+      <li><strong>Browser session cookies</strong> — the most dangerous. Session cookies let attackers log into your accounts <em>without needing a password or MFA at all</em></li>
+      <li><strong>Autofill data</strong> — names, addresses, and credit card numbers saved in the browser</li>
+      <li><strong>Cryptocurrency wallets</strong> — wallet files and seed phrases from local crypto wallets</li>
+      <li><strong>Document files</strong> — screenshots, PDFs, files with specific keywords</li>
+      <li><strong>App data</strong> — including session tokens from Discord, Telegram, and other apps</li>
+    </ul>
+
+    <div class="callout callout-warning">
+      <div class="callout-label">// Cookie Theft: The Biggest Hidden Threat</div>
+      <p>If an attacker has your YouTube session cookie, they can take over your channel immediately — without knowing your password. This is why many creators suddenly lose their channels — it's not their password that was stolen, but their session cookie.</p>
+    </div>
+
+    <h2>How Infostealers Enter Your Device</h2>
+    <ul>
+      <li><strong>Pirated software and cracks</strong> — the most common vector. Crack files for Photoshop, Office, or games are often bundled with infostealers</li>
+      <li><strong>Malvertising</strong> — malicious ads in search engines that mimic popular software sites</li>
+      <li><strong>Phishing attachments</strong> — fake PDFs, Word docs with malicious macros, or ZIP files containing executables</li>
+      <li><strong>Fake YouTube tutorials</strong> — videos showing how to get "free" software with malware links in the description</li>
+    </ul>
+
+    <h2>How to Protect Yourself</h2>
+    <ol>
+      <li><strong>Don't use pirated software</strong> — free and legal alternatives always exist</li>
+      <li><strong>Download only from official sources</strong> — the developer's official website, not mirrors or third-party sites</li>
+      <li><strong>Keep antivirus updated</strong> — Windows Defender is sufficient if always updated</li>
+      <li><strong>Don't save passwords in your browser</strong> — use a dedicated password manager instead</li>
+      <li><strong>Log out of important accounts</strong> on shared or unfamiliar devices</li>
+      <li><strong>Enable login notifications</strong> on all important accounts — early detection is key</li>
+    </ol>
+  </div>
+
+  <div class="article-tags">
+    <span class="article-tag">infostealer</span>
+    <span class="article-tag">malware</span>
+    <span class="article-tag">data-theft</span>
+    <span class="article-tag">privacy</span>
+  </div>
+  <div class="article-nav"><a href="../works.html" id="nav-back">← Semua Tulisan</a></div>
+</article>
+
+<script src="../assets/js/content.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+const _base = applyLang;
+applyLang = function(lang) {
+  _base(lang);
+  const isID = lang === 'id';
+  document.getElementById('body-id').style.display = isID ? '' : 'none';
+  document.getElementById('body-en').style.display = isID ? 'none' : '';
+  document.getElementById('art-cat').textContent = isID ? 'Pengetahuan' : 'Knowledge';
+  document.getElementById('art-date').textContent = isID ? '10 April 2026' : 'April 10, 2026';
+  document.getElementById('art-time').textContent = isID ? '· 8 Menit Baca' : '· 8 Min Read';
+  document.getElementById('art-title').textContent = isID ? 'Apa Itu Malware Infostealer dan Kenapa Banyak Korban Tidak Menyadarinya' : 'What Is Infostealer Malware and Why Most Victims Never Know';
+  document.getElementById('art-lead').textContent = isID ? 'Infostealer adalah jenis malware yang bekerja dalam diam — mencuri password, cookie sesi, dan data browser Anda dalam hitungan detik tanpa gejala apapun.' : 'Infostealers are malware that work in silence — stealing your passwords, session cookies, and browser data in seconds with no visible symptoms.';
+  document.getElementById('art-divider').textContent = isID ? '// MULAI TRANSMISI' : '// BEGIN TRANSMISSION';
+  document.getElementById('nav-back').textContent = isID ? '← Semua Tulisan' : '← All Articles';
+  document.title = isID ? 'Apa Itu Malware Infostealer — CyberpunkID' : 'What Is Infostealer Malware — CyberpunkID';
+};
+</script>
+</body>
+</html>

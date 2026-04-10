@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cara Aman Menggunakan WiFi Publik Tanpa Takut Data Dicuri — CyberpunkID</title>
+<meta name="description" content="WiFi gratis di kafe dan mall bisa jadi jebakan. Pelajari risiko nyata dan cara aman menggunakannya.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@400;600;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/article.css">
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+<div class="reading-progress-bar" id="reading-progress"></div>
+<canvas id="starfield"></canvas>
+<div class="grid-overlay"></div>
+<div class="scanline"></div>
+<nav>
+  <div class="nav-logo">
+    <a href="../index.html" style="text-decoration:none;color:inherit" class="nav-logo-text">Cyber<span>_</span>PunkID</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="../index.html"><span data-i18n="nav_home">Beranda</span></a></li>
+    <li><a href="../works.html" class="active"><span data-i18n="nav_works">Tulisan</span></a></li>
+    <li><a href="../about.html"><span data-i18n="nav_about">Tentang</span></a></li>
+  </ul>
+  <button class="lang-toggle" onclick="toggleLang()" aria-label="Ganti bahasa">
+    <span data-lang="id" class="lang-active">ID</span><span class="lang-sep">|</span><span data-lang="en">EN</span>
+  </button>
+</nav>
+<article>
+  <div class="article-meta">
+    <span class="article-category" id="art-cat">Tips &amp; Trik</span>
+    <span class="article-date" id="art-date">10 April 2026</span>
+    <span class="article-read-time" id="art-time">· 6 Menit Baca</span>
+  </div>
+  <h1 class="article-title" id="art-title">Cara Aman Menggunakan WiFi Publik Tanpa Takut Data Dicuri</h1>
+  <p class="article-lead" id="art-lead">WiFi gratis di kafe, bandara, atau mall terasa seperti berkah — tapi jaringan publik adalah taman bermain penyerang. Inilah risiko nyatanya dan cara melindungi diri Anda.</p>
+  <div class="article-divider"><span id="art-divider">// MULAI TRANSMISI</span></div>
+
+  <div class="article-body" id="body-id">
+    <h2>Mengapa WiFi Publik Berbahaya?</h2>
+    <p>WiFi publik berbeda dengan koneksi rumah Anda. Di jaringan publik, semua perangkat yang terhubung berada di segmen jaringan yang sama — artinya secara teknis, pengguna lain di jaringan yang sama bisa "mendengar" lalu lintas data Anda jika tidak dienkripsi dengan benar.</p>
+
+    <div class="stat-grid">
+      <div class="stat-box"><span class="stat-num">25%</span><span class="stat-desc">WiFi publik tidak menggunakan enkripsi</span></div>
+      <div class="stat-box"><span class="stat-num">1 dari 4</span><span class="stat-desc">Pengguna WiFi publik pernah diretas</span></div>
+      <div class="stat-box"><span class="stat-num">3x</span><span class="stat-desc">Risiko lebih tinggi dibanding jaringan privat</span></div>
+    </div>
+
+    <h2>Ancaman Nyata di WiFi Publik</h2>
+    <h3>1. Evil Twin / Fake Hotspot</h3>
+    <p>Penyerang membuat hotspot WiFi dengan nama yang hampir sama dengan WiFi resmi tempat tersebut. Misalnya di kafe "Kopi Nusantara", penyerang membuat hotspot "Kopi_Nusantara_Free" atau "KopiNusantara2". Semua lalu lintas data Anda melewati perangkat mereka terlebih dahulu.</p>
+
+    <h3>2. Man-in-the-Middle (MitM) Attack</h3>
+    <p>Penyerang memposisikan diri di antara perangkat Anda dan router WiFi. Mereka bisa melihat, memodifikasi, bahkan menyuntikkan konten ke dalam koneksi yang tidak terenkripsi — termasuk halaman web yang Anda buka.</p>
+
+    <h3>3. Packet Sniffing</h3>
+    <p>Menggunakan tools seperti Wireshark, siapapun di jaringan yang sama bisa menangkap dan menganalisis paket data yang tidak terenkripsi. Data yang ditransmisikan via HTTP (bukan HTTPS) terlihat jelas seperti teks biasa.</p>
+
+    <div class="callout callout-warning">
+      <div class="callout-label">// Perhatian</div>
+      <p>Jangan pernah melakukan transaksi perbankan, memasukkan password penting, atau mengakses data sensitif saat menggunakan WiFi publik — kecuali Anda menggunakan VPN yang terpercaya.</p>
+    </div>
+
+    <h2>Cara Aman Menggunakan WiFi Publik</h2>
+
+    <h3>1. Pastikan HTTPS di Setiap Situs</h3>
+    <p>Selalu pastikan URL dimulai dengan <em>https://</em> dan ada ikon gembok di address bar browser. HTTPS mengenkripsi koneksi antara browser Anda dan server website, sehingga bahkan jika traffic Anda dicegat, isinya tidak terbaca.</p>
+    <p>Di Chrome/Edge, aktifkan mode <strong>"Always use HTTPS"</strong> di Settings → Privacy and Security → Security → Advanced untuk memaksa semua koneksi menggunakan HTTPS.</p>
+
+    <h3>2. Verifikasi Nama WiFi dengan Staff</h3>
+    <p>Sebelum terkoneksi, tanyakan kepada karyawan nama WiFi yang benar dan passwordnya. Jangan langsung pilih jaringan dengan sinyal terkuat atau nama yang terlihat paling resmi — penyerang sengaja memberi sinyal kuat dan nama yang meyakinkan.</p>
+
+    <h3>3. Matikan Berbagi File dan Fitur Discovery</h3>
+    <p>Di Windows: Settings → Network → Advanced network settings → matikan <em>Network Discovery</em> dan <em>File and printer sharing</em>. Di Mac: System Preferences → Sharing → pastikan semua opsi dimatikan ketika di jaringan publik.</p>
+
+    <h3>4. Gunakan VPN (Opsional tapi Direkomendasikan)</h3>
+    <p>VPN (Virtual Private Network) mengenkripsi semua traffic internet Anda dalam sebuah tunnel aman, membuat aktivitas online Anda tidak terbaca meski di jaringan yang dikompromikan. Rekomendasi VPN yang bisa dipercaya:</p>
+    <ul>
+      <li><strong>Mullvad VPN</strong> — fokus privasi, tidak menyimpan log, pembayaran anonim</li>
+      <li><strong>ProtonVPN</strong> — open source, diaudit independen, ada versi gratis</li>
+      <li><strong>Windscribe</strong> — pilihan yang baik dengan tier gratis cukup besar (10GB/bulan)</li>
+    </ul>
+
+    <div class="callout">
+      <div class="callout-label">// Peringatan VPN Gratis</div>
+      <p>Hindari VPN gratis yang tidak jelas asal-usulnya — banyak yang justru menjual data browsing Anda. VPN gratis terpercaya adalah ProtonVPN Free dan Windscribe Free. VPN gratisan lain, terutama yang ditemukan di Play Store sembarangan, berpotensi malware.</p>
+    </div>
+
+    <h3>5. Gunakan Hotspot Pribadi untuk Transaksi Penting</h3>
+    <p>Untuk internet banking, transfer uang, atau aktivitas sensitif lainnya — matikan WiFi publik dan gunakan hotspot dari ponsel Anda sendiri (tethering). Jaringan seluler jauh lebih aman untuk transaksi keuangan.</p>
+
+    <h3>6. Lupakan Jaringan Setelah Selesai</h3>
+    <p>Setelah selesai menggunakan WiFi publik, hapus jaringan dari daftar tersimpan di perangkat Anda. Ini mencegah perangkat terhubung otomatis ke jaringan dengan nama yang sama di lokasi lain yang mungkin sudah dikompromikan.</p>
+
+    <h2>Aturan Sederhana untuk WiFi Publik</h2>
+    <p>Anggap WiFi publik seperti toilet umum — gunakan seperlunya, cuci tangan sesudahnya (logout dari akun), dan jangan bawa barang berharga (data sensitif) masuk ke sana. Dengan pendekatan ini, Anda bisa tetap produktif sambil bepergian tanpa mengorbankan keamanan.</p>
+  </div>
+
+  <div class="article-body" id="body-en" style="display:none">
+    <h2>Why Is Public WiFi Dangerous?</h2>
+    <p>Public WiFi differs from your home connection. On a public network, all connected devices share the same network segment — meaning technically, other users on the same network can "listen" to your data traffic if it's not properly encrypted.</p>
+
+    <div class="stat-grid">
+      <div class="stat-box"><span class="stat-num">25%</span><span class="stat-desc">Public WiFi networks have no encryption</span></div>
+      <div class="stat-box"><span class="stat-num">1 in 4</span><span class="stat-desc">Public WiFi users have been hacked</span></div>
+      <div class="stat-box"><span class="stat-num">3x</span><span class="stat-desc">Higher risk compared to private networks</span></div>
+    </div>
+
+    <h2>Real Threats on Public WiFi</h2>
+    <h3>1. Evil Twin / Fake Hotspot</h3>
+    <p>Attackers create WiFi hotspots with names nearly identical to the legitimate one. All your data traffic flows through their device first.</p>
+
+    <h3>2. Man-in-the-Middle (MitM) Attack</h3>
+    <p>Attackers position themselves between your device and the WiFi router. They can see, modify, or inject content into unencrypted connections — including web pages you're browsing.</p>
+
+    <h3>3. Packet Sniffing</h3>
+    <p>Using tools like Wireshark, anyone on the same network can capture and analyze unencrypted data packets. Data transmitted via HTTP (not HTTPS) is visible as plain text.</p>
+
+    <div class="callout callout-warning">
+      <div class="callout-label">// Warning</div>
+      <p>Never do banking transactions, enter important passwords, or access sensitive data on public WiFi — unless you're using a trusted VPN.</p>
+    </div>
+
+    <h2>How to Use Public WiFi Safely</h2>
+    <ol>
+      <li><strong>Ensure HTTPS on every site</strong> — verify the padlock icon in the address bar before entering any information</li>
+      <li><strong>Verify the WiFi name with staff</strong> — ask an employee for the correct network name before connecting</li>
+      <li><strong>Disable file sharing and discovery</strong> — turn off network discovery and file sharing in your OS settings</li>
+      <li><strong>Use a trusted VPN</strong> — ProtonVPN or Mullvad are reputable choices. Avoid unknown free VPNs</li>
+      <li><strong>Use your phone's hotspot for sensitive transactions</strong> — cellular networks are far safer for financial activities</li>
+      <li><strong>Forget the network after use</strong> — remove it from saved networks to prevent automatic reconnection</li>
+    </ol>
+
+    <h2>The Simple Rule for Public WiFi</h2>
+    <p>Think of public WiFi like a public restroom — use it when necessary, wash your hands afterward (log out of accounts), and don't bring valuables inside (sensitive data). With this approach, you can stay productive while traveling without sacrificing security.</p>
+  </div>
+
+  <div class="article-tags">
+    <span class="article-tag">wifi-security</span>
+    <span class="article-tag">public-network</span>
+    <span class="article-tag">privacy</span>
+    <span class="article-tag">safe-browsing</span>
+  </div>
+  <div class="article-nav"><a href="../works.html" id="nav-back">← Semua Tulisan</a></div>
+</article>
+<script src="../assets/js/content.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+const _base = applyLang;
+applyLang = function(lang) {
+  _base(lang);
+  const isID = lang === 'id';
+  document.getElementById('body-id').style.display = isID ? '' : 'none';
+  document.getElementById('body-en').style.display = isID ? 'none' : '';
+  document.getElementById('art-cat').textContent = isID ? 'Tips & Trik' : 'Tips & Tricks';
+  document.getElementById('art-date').textContent = isID ? '10 April 2026' : 'April 10, 2026';
+  document.getElementById('art-time').textContent = isID ? '· 6 Menit Baca' : '· 6 Min Read';
+  document.getElementById('art-title').textContent = isID ? 'Cara Aman Menggunakan WiFi Publik Tanpa Takut Data Dicuri' : 'How to Safely Use Public WiFi Without Fear of Data Theft';
+  document.getElementById('art-lead').textContent = isID ? 'WiFi gratis di kafe, bandara, atau mall terasa seperti berkah — tapi jaringan publik adalah taman bermain penyerang.' : 'Free WiFi at cafes, airports, or malls feels like a blessing — but public networks are an attacker\'s playground.';
+  document.getElementById('art-divider').textContent = isID ? '// MULAI TRANSMISI' : '// BEGIN TRANSMISSION';
+  document.getElementById('nav-back').textContent = isID ? '← Semua Tulisan' : '← All Articles';
+  document.title = isID ? 'Cara Aman Menggunakan WiFi Publik — CyberpunkID' : 'How to Safely Use Public WiFi — CyberpunkID';
+};
+</script>
+</body>
+</html>

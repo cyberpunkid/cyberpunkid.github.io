@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7 Cara Mengenali Link Berbahaya Sebelum Anda Klik — CyberpunkID</title>
+<meta name="description" content="Satu klik bisa meruntuhkan segalanya. Pelajari 7 teknik praktis untuk mengenali link berbahaya sebelum terlambat.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@400;600;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/article.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+<div class="reading-progress-bar" id="reading-progress"></div>
+<canvas id="starfield"></canvas>
+<div class="grid-overlay"></div>
+<div class="scanline"></div>
+
+<nav>
+  <div class="nav-logo">
+    <a href="../index.html" style="text-decoration:none;color:inherit" class="nav-logo-text">
+      Cyber<span>_</span>PunkID
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="../index.html"><span data-i18n="nav_home">Beranda</span></a></li>
+    <li><a href="../works.html" class="active"><span data-i18n="nav_works">Tulisan</span></a></li>
+    <li><a href="../about.html"><span data-i18n="nav_about">Tentang</span></a></li>
+  </ul>
+  <button class="lang-toggle" onclick="toggleLang()" aria-label="Ganti bahasa">
+    <span data-lang="id" class="lang-active">ID</span>
+    <span class="lang-sep">|</span>
+    <span data-lang="en">EN</span>
+  </button>
+</nav>
+
+<article>
+
+  <div class="article-meta">
+    <span class="article-category" id="art-cat">Tips &amp; Trik</span>
+    <span class="article-date" id="art-date">10 April 2026</span>
+    <span class="article-read-time" id="art-time">· 5 Menit Baca</span>
+  </div>
+
+  <h1 class="article-title" id="art-title">
+    7 Cara Mengenali Link Berbahaya Sebelum Anda Klik
+  </h1>
+
+  <p class="article-lead" id="art-lead">
+    Satu klik bisa meruntuhkan segalanya — akun, data pribadi, bahkan rekening bank. Tapi dengan 7 teknik sederhana ini, Anda bisa mendeteksi link berbahaya sebelum terlambat.
+  </p>
+
+  <div class="article-divider"><span id="art-divider">// MULAI TRANSMISI</span></div>
+
+  <div class="article-body" id="body-id">
+
+    <h2>Kenapa Link Adalah Vektor Serangan Paling Berbahaya</h2>
+    <p>Link adalah senjata paling sering digunakan dalam serangan siber karena alasan sederhana: manusia terprogram untuk penasaran dan mempercayai konteks. Jika pesan terlihat dari sumber terpercaya dan konteksnya masuk akal, insting pertama adalah klik.</p>
+    <p>Penyerang tahu hal ini, dan mereka merancang link berbahaya untuk melewati pertahanan psikologis tersebut. Berikut adalah 7 teknik yang bisa Anda gunakan sekarang untuk memeriksa link sebelum mengkliknya.</p>
+
+    <div class="callout">
+      <div class="callout-label">// Aturan Dasar</div>
+      <p>Jangan pernah terburu-buru mengklik link. Ambil 5 detik untuk memeriksa — 5 detik itu jauh lebih murah daripada berurusan dengan akun yang dibobol atau data yang dicuri.</p>
+    </div>
+
+    <h2>1. Hover Sebelum Klik (Desktop)</h2>
+    <p>Di komputer atau laptop, arahkan kursor ke atas link tanpa mengkliknya. URL asli akan muncul di sudut kiri bawah browser. Bandingkan URL yang muncul dengan konteks pesan — apakah keduanya sesuai?</p>
+    <p>Jika tombol bertuliskan "Login ke BCA" tapi URL yang muncul adalah <em>http://bca-mobile.xyz/login</em>, itu adalah phishing yang jelas.</p>
+
+    <h2>2. Preview Link di Mobile (Tahan Jari)</h2>
+    <p>Di smartphone, tekan dan tahan link (jangan ketuk cepat) selama 1-2 detik. Sebuah popup akan muncul menampilkan URL asli dan opsi untuk membuka atau menyalin. Ini adalah cara paling aman untuk memeriksa link di perangkat mobile tanpa risikonya terbuka.</p>
+
+    <div class="callout callout-warning">
+      <div class="callout-label">// Perhatian</div>
+      <p>Di beberapa aplikasi chat (termasuk WhatsApp lama), preview link tidak selalu akurat. Selalu lebih aman untuk menyalin URL lalu memeriksanya secara manual di browser atau tools verifikasi online.</p>
+    </div>
+
+    <h2>3. Waspadai Domain Typo (Typosquatting)</h2>
+    <p>Penyerang mendaftarkan domain yang hampir identik dengan situs resmi, dengan perbedaan kecil yang mudah terlewat:</p>
+
+    <div class="code-block">
+# Domain asli vs domain phishing
+google.com      → g00gle.com / gogle.com / google.co
+paypal.com      → paypa1.com / paypa-l.com / paypal.co
+tokopedia.com   → tokopedla.com / t0kopedia.com
+bca.co.id       → bca-online.com / bcaid.net
+    </div>
+
+    <p>Selalu perhatikan ejaan domain dengan teliti, terutama pada karakter yang mirip: <em>0 vs O</em>, <em>1 vs l vs I</em>, <em>rn vs m</em>.</p>
+
+    <h2>4. Bongkar Shortlink Sebelum Klik</h2>
+    <p>Shortlink seperti <em>bit.ly/abc123</em> atau <em>s.id/xyz</em> menyembunyikan URL aslinya. Ini berguna untuk berbagi link panjang, tapi juga sering disalahgunakan untuk menyembunyikan link berbahaya.</p>
+    <p>Untuk membongkar shortlink tanpa mengkliknya, gunakan layanan berikut:</p>
+    <ul>
+      <li><strong>checkshorturl.com</strong> — paste shortlink, lihat URL tujuan aslinya</li>
+      <li><strong>unshorten.it</strong> — ekspansi shortlink otomatis</li>
+      <li><strong>wheregoes.com</strong> — lacak semua redirect hingga tujuan akhir</li>
+    </ul>
+
+    <h2>5. Cek Indikator Halaman Login Palsu</h2>
+    <p>Halaman phishing sering meniru tampilan halaman login yang Anda kenal. Tapi ada beberapa tanda yang hampir selalu ada:</p>
+    <ul>
+      <li><strong>URL bukan domain resmi</strong> — periksa bagian sebelum <em>.com/.id/.net</em></li>
+      <li><strong>Tidak ada HTTPS</strong> atau sertifikat SSL yang expired (tapi ingat: HTTPS saja tidak menjamin keamanan — situs phishing juga bisa pakai HTTPS)</li>
+      <li><strong>Form meminta informasi berlebih</strong> — login normal tidak perlu PIN, nomor KTP, atau data kartu secara bersamaan</li>
+      <li><strong>Tidak ada link lain yang berfungsi</strong> — di halaman phishing, biasanya hanya form login yang bisa diklik</li>
+    </ul>
+
+    <div class="callout">
+      <div class="callout-label">// Trick Sederhana</div>
+      <p>Jika ragu apakah halaman login itu asli, ketik password yang salah dengan sengaja. Situs resmi akan memberi pesan error. Situs phishing sering langsung "berhasil" login apapun yang Anda masukkan — karena tujuannya hanya mencuri input Anda.</p>
+    </div>
+
+    <h2>6. Gunakan Tools Verifikasi URL</h2>
+    <p>Beberapa tools online gratis dapat menganalisis URL mencurigakan sebelum Anda membukanya:</p>
+    <ul>
+      <li><strong>VirusTotal.com</strong> — scan URL menggunakan 70+ mesin antivirus dan database phishing</li>
+      <li><strong>Google Safe Browsing</strong> (transparencyreport.google.com/safe-browsing/search) — cek apakah Google telah menandai URL sebagai berbahaya</li>
+      <li><strong>URLVoid.com</strong> — reputasi domain dari berbagai sumber</li>
+      <li><strong>PhishTank.com</strong> — database crowdsourced khusus untuk URL phishing</li>
+    </ul>
+
+    <h2>7. Perhatikan Subdomain Trick</h2>
+    <p>Ini adalah teknik phishing paling licik yang sering berhasil mengelabui bahkan pengguna berpengalaman. Penyerang menggunakan nama domain resmi sebagai <em>subdomain</em> di domain yang mereka kontrol:</p>
+
+    <div class="code-block">
+# AMAN (domain resmi adalah paypal.com)
+https://www.paypal.com/login
+
+# BAHAYA (domain asli adalah attacker.com)
+https://paypal.com.attacker.com/login
+https://secure.paypal.login.xyz/account
+    </div>
+
+    <p>Aturannya: domain yang berlaku adalah bagian <strong>tepat sebelum TLD</strong> (.com, .id, .net). Dalam <em>paypal.com.attacker.com</em>, domain aslinya adalah <em>attacker.com</em>, bukan <em>paypal.com</em>.</p>
+
+    <h2>Kebiasaan yang Melindungi Seterusnya</h2>
+    <p>Tujuh teknik di atas akan terasa lambat di awal, tapi dengan latihan, pemeriksaan link akan menjadi insting otomatis — seperti melihat kanan-kiri sebelum menyeberang jalan. Mulai terapkan satu teknik per hari, dan dalam seminggu, Anda sudah jauh lebih aman dari mayoritas pengguna internet.</p>
+
+  </div>
+
+  <div class="article-body" id="body-en" style="display:none">
+
+    <h2>Why Links Are the Most Dangerous Attack Vector</h2>
+    <p>Links are the most commonly used weapon in cyberattacks for a simple reason: humans are hardwired for curiosity and contextual trust. If a message appears to come from a trusted source and the context makes sense, the first instinct is to click.</p>
+    <p>Attackers know this, and they design malicious links to bypass these psychological defenses. Here are 7 techniques you can use right now to inspect links before clicking them.</p>
+
+    <div class="callout">
+      <div class="callout-label">// Ground Rule</div>
+      <p>Never rush to click a link. Take 5 seconds to check — those 5 seconds cost far less than dealing with a compromised account or stolen data.</p>
+    </div>
+
+    <h2>1. Hover Before Clicking (Desktop)</h2>
+    <p>On a computer or laptop, hover your cursor over a link without clicking. The actual URL will appear in the bottom-left corner of your browser. Compare the URL that appears with the message context — do they match?</p>
+    <p>If a button says "Login to your bank" but the URL shows <em>http://bank-mobile.xyz/login</em>, that's clear phishing.</p>
+
+    <h2>2. Preview Links on Mobile (Press and Hold)</h2>
+    <p>On a smartphone, press and hold the link (don't tap quickly) for 1-2 seconds. A popup will appear showing the actual URL and options to open or copy it. This is the safest way to inspect a link on mobile without the risk of it opening.</p>
+
+    <div class="callout callout-warning">
+      <div class="callout-label">// Warning</div>
+      <p>In some chat apps, link previews aren't always accurate. It's always safer to copy the URL and examine it manually in a browser or online verification tool.</p>
+    </div>
+
+    <h2>3. Watch for Domain Typos (Typosquatting)</h2>
+    <p>Attackers register domains nearly identical to legitimate sites, with small differences easy to miss:</p>
+
+    <div class="code-block">
+# Real domain vs phishing domain
+google.com    → g00gle.com / gogle.com
+paypal.com    → paypa1.com / paypa-l.com
+amazon.com    → arnazon.com / amazon.co
+    </div>
+
+    <p>Always carefully check domain spelling, especially similar characters: <em>0 vs O</em>, <em>1 vs l vs I</em>, <em>rn vs m</em>.</p>
+
+    <h2>4. Expand Shortlinks Before Clicking</h2>
+    <p>Shortlinks like <em>bit.ly/abc123</em> hide the actual destination URL. They're useful for sharing long links, but often misused to conceal malicious URLs.</p>
+    <p>To expand a shortlink without clicking it, use these services:</p>
+    <ul>
+      <li><strong>checkshorturl.com</strong> — paste the shortlink, see the real destination URL</li>
+      <li><strong>unshorten.it</strong> — automatic shortlink expansion</li>
+      <li><strong>wheregoes.com</strong> — trace all redirects to the final destination</li>
+    </ul>
+
+    <h2>5. Check for Fake Login Page Indicators</h2>
+    <p>Phishing pages often mimic the look of login pages you know. But there are signs almost always present:</p>
+    <ul>
+      <li><strong>URL isn't the official domain</strong> — check the part before <em>.com/.net/.org</em></li>
+      <li><strong>No HTTPS</strong> or expired SSL certificate (but remember: HTTPS alone doesn't guarantee safety — phishing sites can also use HTTPS)</li>
+      <li><strong>Form asks for excessive information</strong> — normal login doesn't need your PIN, ID number, and card data all at once</li>
+      <li><strong>No other links work</strong> — phishing pages usually only have a functional login form</li>
+    </ul>
+
+    <div class="callout">
+      <div class="callout-label">// Simple Trick</div>
+      <p>If unsure whether a login page is real, intentionally type a wrong password. Legitimate sites will show an error message. Phishing sites often "successfully log you in" no matter what you enter — because they just want to capture your input.</p>
+    </div>
+
+    <h2>6. Use URL Verification Tools</h2>
+    <p>Several free online tools can analyze suspicious URLs before you open them:</p>
+    <ul>
+      <li><strong>VirusTotal.com</strong> — scan the URL using 70+ antivirus engines and phishing databases</li>
+      <li><strong>Google Safe Browsing</strong> (transparencyreport.google.com) — check if Google has flagged the URL as dangerous</li>
+      <li><strong>URLVoid.com</strong> — domain reputation from multiple sources</li>
+      <li><strong>PhishTank.com</strong> — crowdsourced database specifically for phishing URLs</li>
+    </ul>
+
+    <h2>7. Watch for the Subdomain Trick</h2>
+    <p>This is the slickest phishing technique that often fools even experienced users. Attackers use a legitimate domain name as a <em>subdomain</em> on a domain they control:</p>
+
+    <div class="code-block">
+# SAFE (real domain is paypal.com)
+https://www.paypal.com/login
+
+# DANGEROUS (real domain is attacker.com)
+https://paypal.com.attacker.com/login
+https://secure.paypal.login.xyz/account
+    </div>
+
+    <p>The rule: the effective domain is the part <strong>immediately before the TLD</strong> (.com, .net, .org). In <em>paypal.com.attacker.com</em>, the real domain is <em>attacker.com</em>, not <em>paypal.com</em>.</p>
+
+    <h2>Habits That Protect You Forever</h2>
+    <p>These seven techniques may feel slow at first, but with practice, link-checking becomes automatic instinct — like looking both ways before crossing the street. Start applying one technique per day, and within a week, you'll be far safer than the majority of internet users.</p>
+
+  </div>
+
+  <div class="article-tags">
+    <span class="article-tag">phishing-detection</span>
+    <span class="article-tag">safe-browsing</span>
+    <span class="article-tag">phishing</span>
+    <span class="article-tag">social-engineering</span>
+  </div>
+
+  <div class="article-nav">
+    <a href="../works.html" id="nav-back">← Semua Tulisan</a>
+  </div>
+
+</article>
+
+<script src="../assets/js/content.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+const _base = applyLang;
+applyLang = function(lang) {
+  _base(lang);
+  const isID = lang === 'id';
+  document.getElementById('body-id').style.display = isID ? '' : 'none';
+  document.getElementById('body-en').style.display = isID ? 'none' : '';
+  document.getElementById('art-cat').textContent  = isID ? 'Tips & Trik' : 'Tips & Tricks';
+  document.getElementById('art-date').textContent = isID ? '10 April 2026' : 'April 10, 2026';
+  document.getElementById('art-time').textContent = isID ? '· 5 Menit Baca' : '· 5 Min Read';
+  document.getElementById('art-title').textContent = isID
+    ? '7 Cara Mengenali Link Berbahaya Sebelum Anda Klik'
+    : '7 Ways to Spot Dangerous Links Before You Click';
+  document.getElementById('art-lead').textContent = isID
+    ? 'Satu klik bisa meruntuhkan segalanya — akun, data pribadi, bahkan rekening bank. Tapi dengan 7 teknik sederhana ini, Anda bisa mendeteksi link berbahaya sebelum terlambat.'
+    : 'One click can bring everything crashing down — accounts, personal data, even your bank balance. But with these 7 simple techniques, you can detect dangerous links before it\'s too late.';
+  document.getElementById('art-divider').textContent = isID ? '// MULAI TRANSMISI' : '// BEGIN TRANSMISSION';
+  document.getElementById('nav-back').textContent    = isID ? '← Semua Tulisan' : '← All Articles';
+  document.title = isID
+    ? '7 Cara Mengenali Link Berbahaya Sebelum Anda Klik — CyberpunkID'
+    : '7 Ways to Spot Dangerous Links Before You Click — CyberpunkID';
+};
+</script>
+</body>
+</html>

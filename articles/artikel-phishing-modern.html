@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apa Itu Phishing dan Kenapa Sekarang Lebih Sulit Dideteksi? — CyberpunkID</title>
+<meta name="description" content="Phishing bukan lagi email Nigeria yang kacau. Serangan AI phishing modern hampir mustahil dibedakan dari komunikasi resmi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@400;600;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/article.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+<div class="reading-progress-bar" id="reading-progress"></div>
+<canvas id="starfield"></canvas>
+<div class="grid-overlay"></div>
+<div class="scanline"></div>
+
+<nav>
+  <div class="nav-logo">
+    <a href="../index.html" style="text-decoration:none;color:inherit" class="nav-logo-text">
+      Cyber<span>_</span>PunkID
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="../index.html"><span data-i18n="nav_home">Beranda</span></a></li>
+    <li><a href="../works.html" class="active"><span data-i18n="nav_works">Tulisan</span></a></li>
+    <li><a href="../about.html"><span data-i18n="nav_about">Tentang</span></a></li>
+  </ul>
+  <button class="lang-toggle" onclick="toggleLang()" aria-label="Ganti bahasa">
+    <span data-lang="id" class="lang-active">ID</span>
+    <span class="lang-sep">|</span>
+    <span data-lang="en">EN</span>
+  </button>
+</nav>
+
+<article>
+
+  <div class="article-meta">
+    <span class="article-category" id="art-cat">Pengetahuan</span>
+    <span class="article-date" id="art-date">10 April 2026</span>
+    <span class="article-read-time" id="art-time">· 8 Menit Baca</span>
+  </div>
+
+  <h1 class="article-title" id="art-title">
+    Apa Itu Phishing dan Kenapa Sekarang Lebih Sulit Dideteksi?
+  </h1>
+
+  <p class="article-lead" id="art-lead">
+    Phishing bukan lagi email dari "Pangeran Nigeria" yang penuh typo. Di era AI, serangan phishing modern dirancang khusus untuk Anda — menggunakan data pribadi Anda, bahasa yang sempurna, dan tampilan yang identik dengan aslinya.
+  </p>
+
+  <div class="article-divider"><span id="art-divider">// MULAI TRANSMISI</span></div>
+
+  <div class="article-body" id="body-id">
+
+    <h2>Phishing Klasik: Mudah Dikenali, Mudah Dihindari</h2>
+    <p>Generasi pertama phishing mudah diidentifikasi. Email dari "Bank BCA" ditulis dengan ejaan berantakan, tata bahasa kacau, domain pengirim seperti <em>bca-support@gmail.com</em>, dan desain yang jauh dari tampilan resmi. Siapa pun dengan sedikit kewaspadaan bisa melihat tanda-tanda ini.</p>
+    <p>Tapi jangan terlena dengan kemampuan mengenali phishing lama. Dunia sudah berubah drastis, dan serangan phishing modern telah berevolusi melampaui kemampuan deteksi kebanyakan orang — bahkan mereka yang bekerja di bidang IT.</p>
+
+    <div class="stat-grid">
+      <div class="stat-box"><span class="stat-num">3.4B</span><span class="stat-desc">Email phishing dikirim setiap hari global</span></div>
+      <div class="stat-box"><span class="stat-num">36%</span><span class="stat-desc">Data breach dimulai dari phishing</span></div>
+      <div class="stat-box"><span class="stat-num">74%</span><span class="stat-desc">Serangan phishing mengandung legitimate service</span></div>
+    </div>
+
+    <h2>Evolusi Phishing: Dari Massal ke Personal</h2>
+    <p>Phishing modern bergerak dari serangan massal menuju serangan yang sangat personal, dikenal sebagai <em>spear phishing</em>. Penyerang melakukan riset mendalam tentang target — profil LinkedIn, postingan media sosial, berita perusahaan — sebelum mengirim pesan yang dirancang khusus.</p>
+    <p>Contoh spear phishing: Anda menerima email dari seseorang yang mengaku rekan kerja di divisi lain, menyebutkan nama atasan Anda, merujuk pada proyek spesifik yang sedang berjalan, dan meminta Anda mengklik link untuk mereview dokumen. Semua detail terasa sangat nyata karena penyerang sudah riset sebelumnya.</p>
+
+    <div class="callout">
+      <div class="callout-label">// Catatan Penting</div>
+      <p>Serangan phishing paling berhasil tidak terlihat seperti serangan. Mereka terlihat seperti komunikasi normal yang sedikit mendesak — dan itulah yang membuatnya berbahaya.</p>
+    </div>
+
+    <h2>AI Phishing: Ancaman yang Mengubah Segalanya</h2>
+    <p>Large Language Model (LLM) seperti GPT telah merevolusi kemampuan penyerang. Yang dulu butuh tim penutur asli bahasa untuk membuat phishing yang meyakinkan, kini bisa dilakukan oleh satu orang dengan biaya mendekati nol.</p>
+    <p>AI phishing memungkinkan:</p>
+    <ul>
+      <li><strong>Bahasa yang sempurna</strong> dalam bahasa Indonesia, Jawa, Sunda, atau dialek apapun tanpa typo</li>
+      <li><strong>Personalisasi massal</strong> — ribuan email berbeda tapi masing-masing terasa personal untuk penerimanya</li>
+      <li><strong>Voice cloning</strong> — suara atasan atau keluarga Anda dapat ditiru untuk panggilan telepon penipuan</li>
+      <li><strong>Deepfake video</strong> — dalam kasus ekstrem, video call palsu menggunakan wajah orang yang Anda kenal</li>
+    </ul>
+
+    <div class="callout callout-warning">
+      <div class="callout-label">// Kasus Nyata</div>
+      <p>Pada 2024, sebuah perusahaan di Hong Kong mengalami kerugian USD 25 juta setelah karyawannya mengikuti instruksi dalam video call yang ternyata seluruh pesertanya adalah <strong>deepfake AI</strong> — termasuk "CFO" perusahaan.</p>
+    </div>
+
+    <h2>WhatsApp Scam: Phishing yang Paling Dekat</h2>
+    <p>Di Indonesia, WhatsApp adalah vektor phishing yang paling aktif. Beberapa pola yang paling sering ditemukan:</p>
+
+    <h3>1. Modus "Paket Tertahan"</h3>
+    <p>Pesan dari nomor tidak dikenal mengklaim paket Anda tertahan di bea cukai dan meminta Anda mengklik link untuk membayar. Link mengarah ke halaman palsu yang mencuri data kartu kredit atau menginstall malware.</p>
+
+    <h3>2. Modus "Undangan Pernikahan APK"</h3>
+    <p>File APK dikirim dengan label "Undangan Digital". Saat diinstall, aplikasi ini meminta izin SMS dan mencuri OTP perbankan Anda secara diam-diam.</p>
+
+    <h3>3. Modus "Salah Transfer"</h3>
+    <p>Seseorang mengklaim salah transfer uang ke akun Anda dan meminta Anda mengembalikannya ke rekening berbeda. Tentu saja tidak ada transfer nyata — ini taktik social engineering.</p>
+
+    <h3>4. Modus Lowongan Kerja</h3>
+    <p>Tawaran kerja dengan gaji tinggi untuk pekerjaan mudah — biasanya berujung pada money mule atau penipuan investasi.</p>
+
+    <h2>Email Scam Modern: Lebih Canggih dari yang Anda Kira</h2>
+    <p>Email phishing modern menggunakan teknik yang jauh lebih sophisticated:</p>
+    <ul>
+      <li><strong>Domain lookalike</strong>: <em>paypa1.com</em> vs <em>paypal.com</em>, <em>g00gle.com</em> vs <em>google.com</em></li>
+      <li><strong>Subdomain trick</strong>: <em>paypal.com.attacker.com</em> — bagian yang terlihat adalah yang di paling kiri, bukan kanan</li>
+      <li><strong>Legitimate service abuse</strong>: Phishing dikirim melalui Google Drive, OneDrive, atau Dropbox — jadi domain pengirimnya benar-benar resmi</li>
+      <li><strong>HTML obfuscation</strong>: Teks yang Anda lihat berbeda dengan link yang sebenarnya ada di balik tombol</li>
+    </ul>
+
+    <div class="callout">
+      <div class="callout-label">// Tips Deteksi</div>
+      <p>Sebelum klik apapun, selalu hover mouse di atas link untuk melihat URL aslinya di status bar browser. Di mobile, tahan jari di atas link untuk melihat preview URL. Jika URL tidak sesuai dengan konteks pesan, jangan klik.</p>
+    </div>
+
+    <h2>Cara Melindungi Diri dari Phishing Modern</h2>
+    <ol>
+      <li><strong>Verifikasi melalui saluran berbeda</strong> — jika menerima permintaan mendesak via email, konfirmasi via telepon langsung atau chat ke nomor yang Anda sudah kenal</li>
+      <li><strong>Jangan percaya urgensi buatan</strong> — "Akun Anda akan ditutup dalam 24 jam!" adalah taktik manipulasi klasik untuk membuat Anda bertindak tanpa berpikir</li>
+      <li><strong>Aktifkan MFA</strong> — bahkan jika password Anda dicuri lewat phishing, MFA mencegah penyerang masuk</li>
+      <li><strong>Gunakan password manager</strong> — password manager tidak akan autofill di domain palsu, ini deteksi phishing otomatis</li>
+      <li><strong>Jangan install APK dari sumber tidak dikenal</strong> — terutama yang dikirim via WhatsApp atau SMS</li>
+      <li><strong>Lapor dan blokir</strong> — laporkan nomor atau email penipu ke platform terkait</li>
+    </ol>
+
+    <h2>Pertahanan Terbaik: Skeptisisme yang Sehat</h2>
+    <p>Di era AI phishing, tidak ada filter teknis yang 100% efektif. Pertahanan terbaik adalah kebiasaan berpikir kritis sebelum bertindak. Tanya diri sendiri: <em>Apakah saya mengharapkan komunikasi ini? Apakah ada tekanan waktu yang tidak wajar? Apakah link mengarah ke tempat yang seharusnya?</em></p>
+    <p>Phishing berhasil karena mengeksploitasi emosi — rasa takut, keserakahan, atau rasa ingin tahu. Latih diri untuk berhenti sejenak ketika merasa tertekan untuk bertindak cepat. Jeda beberapa detik itu bisa menyelamatkan akun, data, dan uang Anda.</p>
+
+  </div>
+
+  <div class="article-body" id="body-en" style="display:none">
+
+    <h2>Classic Phishing: Easy to Spot, Easy to Avoid</h2>
+    <p>The first generation of phishing was easy to identify. Emails from "your bank" were riddled with spelling errors, broken grammar, sender domains like <em>bank-support@gmail.com</em>, and designs far from the official look. Anyone with a little vigilance could spot these signs.</p>
+    <p>But don't be complacent about your ability to recognize old phishing. The world has changed drastically, and modern phishing attacks have evolved beyond the detection capabilities of most people — even those who work in IT.</p>
+
+    <div class="stat-grid">
+      <div class="stat-box"><span class="stat-num">3.4B</span><span class="stat-desc">Phishing emails sent globally every day</span></div>
+      <div class="stat-box"><span class="stat-num">36%</span><span class="stat-desc">Data breaches start with phishing</span></div>
+      <div class="stat-box"><span class="stat-num">74%</span><span class="stat-desc">Phishing attacks use legitimate services</span></div>
+    </div>
+
+    <h2>The Evolution of Phishing: From Mass to Personal</h2>
+    <p>Modern phishing has shifted from mass attacks to highly personal ones, known as <em>spear phishing</em>. Attackers conduct deep research on their targets — LinkedIn profiles, social media posts, company news — before sending carefully crafted messages.</p>
+    <p>A spear phishing example: you receive an email from someone claiming to be a colleague in another department, mentioning your manager's name, referencing a specific ongoing project, and asking you to click a link to review a document. All the details feel very real because the attacker did their homework.</p>
+
+    <div class="callout">
+      <div class="callout-label">// Key Note</div>
+      <p>The most successful phishing attacks don't look like attacks. They look like normal communications with a slight sense of urgency — and that's exactly what makes them dangerous.</p>
+    </div>
+
+    <h2>AI Phishing: The Threat That Changes Everything</h2>
+    <p>Large Language Models (LLMs) like GPT have revolutionized attackers' capabilities. What once required a team of native language writers to create convincing phishing can now be done by a single person at near-zero cost.</p>
+    <p>AI phishing enables:</p>
+    <ul>
+      <li><strong>Perfect language</strong> in any language or dialect without typos</li>
+      <li><strong>Mass personalization</strong> — thousands of different emails, each feeling personal to its recipient</li>
+      <li><strong>Voice cloning</strong> — your boss's or family member's voice can be replicated for scam phone calls</li>
+      <li><strong>Deepfake video</strong> — in extreme cases, fake video calls using the faces of people you know</li>
+    </ul>
+
+    <div class="callout callout-warning">
+      <div class="callout-label">// Real Case</div>
+      <p>In 2024, a company in Hong Kong lost USD 25 million after an employee followed instructions in a video call where all participants turned out to be <strong>AI deepfakes</strong> — including the company's "CFO."</p>
+    </div>
+
+    <h2>WhatsApp Scams: Phishing Closest to Home</h2>
+    <p>WhatsApp is one of the most active phishing vectors today. Common patterns include:</p>
+
+    <h3>1. "Package Held" Scam</h3>
+    <p>A message from an unknown number claims your package is held at customs and asks you to click a link to pay a fee. The link leads to a fake page that steals credit card data or installs malware.</p>
+
+    <h3>2. APK "Wedding Invitation" Scam</h3>
+    <p>An APK file is sent labeled as a "Digital Invitation." When installed, the app requests SMS permissions and silently steals your banking OTPs.</p>
+
+    <h3>3. "Wrong Transfer" Scam</h3>
+    <p>Someone claims to have accidentally transferred money to your account and asks you to return it to a different account. There's no real transfer — this is classic social engineering.</p>
+
+    <h3>4. Job Offer Scam</h3>
+    <p>High-paying job offers for easy work — usually ending in money mule schemes or investment fraud.</p>
+
+    <h2>Modern Email Scams: More Sophisticated Than You Think</h2>
+    <p>Modern phishing emails use far more sophisticated techniques:</p>
+    <ul>
+      <li><strong>Lookalike domains</strong>: <em>paypa1.com</em> vs <em>paypal.com</em></li>
+      <li><strong>Subdomain tricks</strong>: <em>paypal.com.attacker.com</em> — the trustworthy part appears first, but the actual domain is on the right</li>
+      <li><strong>Legitimate service abuse</strong>: Phishing sent via Google Drive or OneDrive — so the sender domain is genuinely official</li>
+      <li><strong>HTML obfuscation</strong>: The text you see differs from the actual link behind a button</li>
+    </ul>
+
+    <div class="callout">
+      <div class="callout-label">// Detection Tip</div>
+      <p>Before clicking anything, always hover your mouse over a link to see the real URL in the browser's status bar. On mobile, press and hold the link to see a URL preview. If the URL doesn't match the message context, don't click.</p>
+    </div>
+
+    <h2>How to Protect Yourself from Modern Phishing</h2>
+    <ol>
+      <li><strong>Verify through a different channel</strong> — if you receive an urgent request via email, confirm by calling directly or messaging a number you already know</li>
+      <li><strong>Don't trust artificial urgency</strong> — "Your account will be closed in 24 hours!" is a classic manipulation tactic to make you act without thinking</li>
+      <li><strong>Enable MFA</strong> — even if your password is stolen through phishing, MFA prevents attackers from getting in</li>
+      <li><strong>Use a password manager</strong> — it won't autofill on fake domains, providing automatic phishing detection</li>
+      <li><strong>Don't install APKs from unknown sources</strong> — especially those sent via WhatsApp or SMS</li>
+      <li><strong>Report and block</strong> — report scam numbers or emails to the relevant platform</li>
+    </ol>
+
+    <h2>The Best Defense: Healthy Skepticism</h2>
+    <p>In the age of AI phishing, no technical filter is 100% effective. The best defense is the habit of thinking critically before acting. Ask yourself: <em>Was I expecting this communication? Is there unusual time pressure? Does this link go where it should?</em></p>
+    <p>Phishing works because it exploits emotions — fear, greed, or curiosity. Train yourself to pause when you feel pressured to act quickly. That few-second pause could save your account, data, and money.</p>
+
+  </div>
+
+  <div class="article-tags">
+    <span class="article-tag">phishing</span>
+    <span class="article-tag">social-engineering</span>
+    <span class="article-tag">cybercrime</span>
+    <span class="article-tag">malware</span>
+    <span class="article-tag">safe-browsing</span>
+  </div>
+
+  <div class="article-nav">
+    <a href="../works.html" id="nav-back">← Semua Tulisan</a>
+  </div>
+
+</article>
+
+<script src="../assets/js/content.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+const _base = applyLang;
+applyLang = function(lang) {
+  _base(lang);
+  const isID = lang === 'id';
+  document.getElementById('body-id').style.display = isID ? '' : 'none';
+  document.getElementById('body-en').style.display = isID ? 'none' : '';
+  document.getElementById('art-cat').textContent  = isID ? 'Pengetahuan' : 'Knowledge';
+  document.getElementById('art-date').textContent = isID ? '10 April 2026' : 'April 10, 2026';
+  document.getElementById('art-time').textContent = isID ? '· 8 Menit Baca' : '· 8 Min Read';
+  document.getElementById('art-title').textContent = isID
+    ? 'Apa Itu Phishing dan Kenapa Sekarang Lebih Sulit Dideteksi?'
+    : 'What Is Phishing and Why Is It Harder to Detect Now?';
+  document.getElementById('art-lead').textContent = isID
+    ? 'Phishing bukan lagi email dari "Pangeran Nigeria" yang penuh typo. Di era AI, serangan phishing modern dirancang khusus untuk Anda — menggunakan data pribadi Anda, bahasa yang sempurna, dan tampilan yang identik dengan aslinya.'
+    : 'Phishing is no longer a poorly written email from a "Nigerian Prince." In the AI era, modern phishing attacks are custom-designed for you — using your personal data, perfect language, and visuals identical to the real thing.';
+  document.getElementById('art-divider').textContent = isID ? '// MULAI TRANSMISI' : '// BEGIN TRANSMISSION';
+  document.getElementById('nav-back').textContent    = isID ? '← Semua Tulisan' : '← All Articles';
+  document.title = isID
+    ? 'Apa Itu Phishing dan Kenapa Sekarang Lebih Sulit Dideteksi? — CyberpunkID'
+    : 'What Is Phishing and Why Is It Harder to Detect Now? — CyberpunkID';
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cara Mengecek Apakah Email atau Password Anda Pernah Bocor — CyberpunkID</title>
+<meta name="description" content="Panduan interaktif menggunakan HaveIBeenPwned dan Google Security Checkup untuk mengetahui apakah data Anda sudah ada di tangan penyerang.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@400;600;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/article.css">
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+<div class="reading-progress-bar" id="reading-progress"></div>
+<canvas id="starfield"></canvas>
+<div class="grid-overlay"></div>
+<div class="scanline"></div>
+<nav>
+  <div class="nav-logo">
+    <a href="../index.html" style="text-decoration:none;color:inherit" class="nav-logo-text">Cyber<span>_</span>PunkID</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="../index.html"><span data-i18n="nav_home">Beranda</span></a></li>
+    <li><a href="../works.html" class="active"><span data-i18n="nav_works">Tulisan</span></a></li>
+    <li><a href="../about.html"><span data-i18n="nav_about">Tentang</span></a></li>
+  </ul>
+  <button class="lang-toggle" onclick="toggleLang()" aria-label="Ganti bahasa">
+    <span data-lang="id" class="lang-active">ID</span><span class="lang-sep">|</span><span data-lang="en">EN</span>
+  </button>
+</nav>
+<article>
+  <div class="article-meta">
+    <span class="article-category" id="art-cat">Panduan</span>
+    <span class="article-date" id="art-date">10 April 2026</span>
+    <span class="article-read-time" id="art-time">· 6 Menit Baca</span>
+  </div>
+  <h1 class="article-title" id="art-title">Cara Mengecek Apakah Email atau Password Anda Pernah Bocor di Internet</h1>
+  <p class="article-lead" id="art-lead">Data Anda mungkin sudah ada di tangan penyerang tanpa Anda sadari. Gunakan tools gratis ini untuk mengeceknya sekarang — dan tahu apa yang harus dilakukan jika hasilnya positif.</p>
+  <div class="article-divider"><span id="art-divider">// MULAI TRANSMISI</span></div>
+
+  <div class="article-body" id="body-id">
+    <h2>Kebocoran Data Lebih Umum dari yang Anda Kira</h2>
+    <p>Ribuan pelanggaran data terjadi setiap tahun. Perusahaan yang menyimpan data Anda — layanan email, marketplace, media sosial, forum online — bisa diretas kapan saja. Ketika itu terjadi, email, password, nomor telepon, bahkan data kartu kredit Anda bisa berakhir di dark web.</p>
+    <p>Kabar baiknya: ada tools gratis yang memungkinkan Anda mengecek apakah data Anda sudah pernah terekspos. Lakukan pengecekan ini sekarang — sebelum penyerang memanfaatkannya.</p>
+
+    <div class="callout">
+      <div class="callout-label">// Fakta</div>
+      <p>Per 2025, database Have I Been Pwned memuat lebih dari <strong>14 miliar akun yang telah bocor</strong> dari ribuan pelanggaran data. Probabilitas bahwa setidaknya satu email Anda ada di dalamnya sangat tinggi.</p>
+    </div>
+
+    <h2>Tool 1: Have I Been Pwned (HIBP)</h2>
+    <p><strong>haveibeenpwned.com</strong> adalah layanan gratis yang dibuat oleh Troy Hunt, peneliti keamanan terkenal. HIBP mengumpulkan data dari ribuan pelanggaran data yang telah terdokumentasi dan memungkinkan siapapun mengecek apakah email mereka ada dalam database tersebut.</p>
+
+    <h3>Cara Menggunakannya:</h3>
+    <ol>
+      <li>Buka <strong>haveibeenpwned.com</strong> di browser</li>
+      <li>Masukkan alamat email Anda di kolom pencarian</li>
+      <li>Klik tombol <strong>"pwned?"</strong></li>
+      <li>Tunggu beberapa detik untuk hasil</li>
+    </ol>
+
+    <h3>Interpretasi Hasil:</h3>
+    <ul>
+      <li><strong>Latar belakang hijau / "Good news"</strong> — Email Anda tidak ditemukan dalam database breach yang diketahui. Tapi ini tidak berarti 100% aman — hanya berarti tidak ada dalam database yang HIBP miliki</li>
+      <li><strong>Latar belakang merah / "Oh no — pwned!"</strong> — Email Anda ditemukan dalam satu atau lebih pelanggaran data. HIBP akan menampilkan daftar breach mana saja dan data apa yang terekspos</li>
+    </ul>
+
+    <div class="callout callout-warning">
+      <div class="callout-label">// Jika Akun Anda Pwned</div>
+      <p>Jangan panik. Segera ganti password di semua layanan yang disebutkan. Jika password yang bocor juga digunakan di layanan lain, ganti di semua tempat tersebut juga. Aktifkan MFA di semua akun penting.</p>
+    </div>
+
+    <h2>Tool 2: HIBP Password Check</h2>
+    <p>HIBP juga memiliki fitur pengecekan password di <strong>haveibeenpwned.com/passwords</strong>. Anda bisa memasukkan password (atau password yang ingin Anda gunakan) untuk mengecek apakah password tersebut pernah muncul dalam database breach.</p>
+    <p>Layanan ini menggunakan teknik <em>k-anonymity</em> — hanya 5 karakter pertama hash SHA-1 password Anda yang dikirim ke server, sehingga password asli Anda tidak pernah meninggalkan perangkat Anda. Ini cara yang aman untuk mengecek.</p>
+
+    <h2>Tool 3: Google Security Checkup</h2>
+    <p>Jika Anda pengguna Chrome atau memiliki akun Google, Google memiliki fitur bawaan untuk mengecek keamanan password tersimpan Anda.</p>
+
+    <h3>Cara Menggunakannya:</h3>
+    <ol>
+      <li>Buka <strong>myaccount.google.com/security-checkup</strong></li>
+      <li>Login dengan akun Google Anda</li>
+      <li>Google akan menampilkan ringkasan keamanan akun, termasuk:
+        <ul>
+          <li>Password yang pernah bocor dalam data breach</li>
+          <li>Password yang digunakan ulang di banyak situs</li>
+          <li>Password yang dianggap lemah</li>
+        </ul>
+      </li>
+      <li>Klik <strong>"Go to Password Checkup"</strong> untuk detail lengkap</li>
+      <li>Ikuti rekomendasi yang diberikan — ganti password yang bermasalah satu per satu</li>
+    </ol>
+
+    <h2>Tool 4: Firefox Monitor</h2>
+    <p>Pengguna Firefox bisa menggunakan <strong>monitor.firefox.com</strong> — layanan serupa HIBP yang dibuat oleh Mozilla. Anda bisa mendaftarkan email dan mendapat notifikasi otomatis jika email Anda muncul dalam breach baru di masa mendatang.</p>
+
+    <h2>Apa yang Harus Dilakukan Setelah Pengecekan?</h2>
+    <ol>
+      <li><strong>Ganti password yang bocor segera</strong> — gunakan password manager untuk membuat password kuat yang unik</li>
+      <li><strong>Aktifkan MFA</strong> di semua akun yang muncul dalam hasil breach</li>
+      <li><strong>Cek akun lain yang memakai password yang sama</strong> — jika Anda pakai password yang sama di banyak tempat, ganti semuanya</li>
+      <li><strong>Monitor credit report</strong> jika data finansial terekspos</li>
+      <li><strong>Set up breach notification</strong> — daftar di HIBP atau Firefox Monitor untuk mendapat peringatan otomatis di masa depan</li>
+    </ol>
+
+    <h2>Jadikan Ini Kebiasaan Rutin</h2>
+    <p>Lakukan pengecekan ini setidaknya sekali setiap 3 bulan. Breach baru terjadi terus-menerus, dan data yang bocor hari ini mungkin baru muncul di database HIBP beberapa bulan kemudian. Monitoring berkelanjutan adalah kunci untuk tetap satu langkah di depan penyerang.</p>
+  </div>
+
+  <div class="article-body" id="body-en" style="display:none">
+    <h2>Data Breaches Are More Common Than You Think</h2>
+    <p>Thousands of data breaches occur every year. Companies storing your data — email services, marketplaces, social media, online forums — can be hacked at any time. When it happens, your email, password, phone number, and even credit card data can end up on the dark web.</p>
+
+    <div class="callout">
+      <div class="callout-label">// Fact</div>
+      <p>As of 2025, the Have I Been Pwned database contains over <strong>14 billion breached accounts</strong> from thousands of data breaches. The probability that at least one of your emails is in there is very high.</p>
+    </div>
+
+    <h2>Tool 1: Have I Been Pwned (HIBP)</h2>
+    <p><strong>haveibeenpwned.com</strong> is a free service by Troy Hunt, a well-known security researcher. Simply enter your email address and check if it appears in any documented data breach.</p>
+    <ul>
+      <li><strong>Green background / "Good news"</strong> — your email wasn't found in any known breaches in HIBP's database</li>
+      <li><strong>Red background / "Oh no — pwned!"</strong> — your email was found. HIBP lists exactly which breaches and what data was exposed</li>
+    </ul>
+
+    <h2>Tool 2: HIBP Password Check</h2>
+    <p>Visit <strong>haveibeenpwned.com/passwords</strong> to check if a password has appeared in any breach. The service uses <em>k-anonymity</em> — only the first 5 characters of your password's SHA-1 hash are sent to the server, so your actual password never leaves your device.</p>
+
+    <h2>Tool 3: Google Security Checkup</h2>
+    <ol>
+      <li>Open <strong>myaccount.google.com/security-checkup</strong></li>
+      <li>Google shows passwords that have been in data breaches, reused passwords, and weak passwords</li>
+      <li>Click <strong>"Go to Password Checkup"</strong> for full details</li>
+      <li>Follow the recommendations and change compromised passwords</li>
+    </ol>
+
+    <h2>What to Do After Checking?</h2>
+    <ol>
+      <li><strong>Change breached passwords immediately</strong> — use a password manager to create strong, unique passwords</li>
+      <li><strong>Enable MFA</strong> on all accounts that appeared in breach results</li>
+      <li><strong>Check other accounts using the same password</strong> — change them all</li>
+      <li><strong>Set up breach notifications</strong> at HIBP or Firefox Monitor for automatic future alerts</li>
+    </ol>
+
+    <h2>Make This a Regular Habit</h2>
+    <p>Do this check at least once every 3 months. New breaches happen continuously, and data leaked today may only appear in HIBP's database months later. Ongoing monitoring is the key to staying one step ahead of attackers.</p>
+  </div>
+
+  <div class="article-tags">
+    <span class="article-tag">data-breach</span>
+    <span class="article-tag">privacy-check</span>
+    <span class="article-tag">password-security</span>
+    <span class="article-tag">privacy</span>
+  </div>
+  <div class="article-nav"><a href="../works.html" id="nav-back">← Semua Tulisan</a></div>
+</article>
+<script src="../assets/js/content.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+const _base = applyLang;
+applyLang = function(lang) {
+  _base(lang);
+  const isID = lang === 'id';
+  document.getElementById('body-id').style.display = isID ? '' : 'none';
+  document.getElementById('body-en').style.display = isID ? 'none' : '';
+  document.getElementById('art-cat').textContent = isID ? 'Panduan' : 'Guide';
+  document.getElementById('art-date').textContent = isID ? '10 April 2026' : 'April 10, 2026';
+  document.getElementById('art-time').textContent = isID ? '· 6 Menit Baca' : '· 6 Min Read';
+  document.getElementById('art-title').textContent = isID ? 'Cara Mengecek Apakah Email atau Password Anda Pernah Bocor di Internet' : 'How to Check If Your Email or Password Has Been Leaked Online';
+  document.getElementById('art-lead').textContent = isID ? 'Data Anda mungkin sudah ada di tangan penyerang tanpa Anda sadari. Gunakan tools gratis ini untuk mengeceknya sekarang.' : 'Your data may already be in attackers\' hands without you knowing. Use these free tools to check right now.';
+  document.getElementById('art-divider').textContent = isID ? '// MULAI TRANSMISI' : '// BEGIN TRANSMISSION';
+  document.getElementById('nav-back').textContent = isID ? '← Semua Tulisan' : '← All Articles';
+  document.title = isID ? 'Cara Cek Email atau Password Bocor — CyberpunkID' : 'How to Check If Your Email or Password Was Leaked — CyberpunkID';
+};
+</script>
+</body>
+</html>

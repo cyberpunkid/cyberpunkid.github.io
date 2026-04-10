@@ -1,0 +1,167 @@
+/* ============================================================
+   CyberpunkID — Article Stylesheet (article.css)
+   Digunakan oleh semua halaman artikel di folder articles/
+   ============================================================ */
+
+.reading-progress-bar {
+  position: fixed; top: 0; left: 0; height: 2px; z-index: 200;
+  background: linear-gradient(90deg, var(--cyan), var(--purple));
+  transition: width 0.1s; width: 0%;
+}
+
+article {
+  position: relative; z-index: 1;
+  max-width: 720px; margin: 0 auto;
+  padding: 140px 24px 100px;
+}
+
+.article-meta {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 24px; flex-wrap: wrap;
+  animation: fadeInUp 0.5s ease both;
+}
+.article-category {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  letter-spacing: 2px; color: var(--cyan); text-transform: uppercase;
+  border: 1px solid var(--border); padding: 4px 12px; background: var(--card);
+}
+.article-date, .article-read-time {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; color: var(--text-dim); letter-spacing: 1px;
+}
+
+h1.article-title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(22px, 4vw, 40px); font-weight: 900; line-height: 1.2;
+  letter-spacing: -1px;
+  background: linear-gradient(135deg, var(--text) 0%, rgba(226,232,240,0.6) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; margin-bottom: 20px;
+  animation: fadeInUp 0.5s ease 0.1s both;
+}
+
+.article-lead {
+  font-size: 16px; color: var(--text-dim); line-height: 1.8;
+  border-left: 2px solid var(--purple); padding-left: 20px;
+  margin-bottom: 48px; animation: fadeInUp 0.5s ease 0.2s both;
+}
+
+.article-divider {
+  display: flex; align-items: center; gap: 12px; margin: 40px 0; color: var(--cyan);
+}
+.article-divider::before, .article-divider::after {
+  content: ''; flex: 1; height: 1px; background: var(--border);
+}
+.article-divider span {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px;
+}
+
+/* Body teks */
+.article-body { animation: fadeInUp 0.5s ease 0.3s both; }
+
+.article-body h2 {
+  font-family: 'Orbitron', monospace; font-size: 20px; font-weight: 700;
+  color: var(--cyan); margin: 44px 0 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.article-body h2::before { content: '//'; color: var(--purple); font-size: 15px; }
+
+.article-body h3 {
+  font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 800;
+  color: var(--text); margin: 28px 0 12px;
+}
+
+.article-body p {
+  color: var(--text-dim); font-size: 15px; line-height: 1.9; margin-bottom: 20px;
+}
+.article-body strong { color: var(--text); }
+.article-body em     { color: var(--cyan); font-style: normal; }
+
+.article-body ul, .article-body ol {
+  padding-left: 0; margin-bottom: 20px; list-style: none;
+}
+.article-body ul li, .article-body ol li {
+  color: var(--text-dim); font-size: 15px; line-height: 1.8;
+  padding: 8px 0 8px 28px; border-bottom: 1px solid rgba(0,245,255,0.05);
+  position: relative;
+}
+.article-body ul li::before { content: '▸'; position: absolute; left: 0; color: var(--cyan); }
+.article-body ol { counter-reset: list; }
+.article-body ol li { counter-increment: list; }
+.article-body ol li::before {
+  content: counter(list, decimal-leading-zero); position: absolute; left: 0;
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--purple);
+}
+
+/* Callout box */
+.callout {
+  background: rgba(0,245,255,0.04); border: 1px solid var(--border);
+  border-left: 3px solid var(--cyan); padding: 20px 24px; margin: 28px 0;
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+.callout-warning { border-left-color: var(--pink); }
+.callout-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  letter-spacing: 2px; color: var(--cyan); text-transform: uppercase; margin-bottom: 8px;
+}
+.callout-warning .callout-label { color: var(--pink); }
+.callout p { margin: 0; color: var(--text-dim); font-size: 15px; line-height: 1.8; }
+
+/* Stat grid */
+.stat-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px; margin: 28px 0;
+}
+.stat-box {
+  background: var(--card); border: 1px solid var(--border); padding: 20px;
+  text-align: center;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+}
+.stat-num {
+  font-family: 'Orbitron', monospace; font-size: 26px; font-weight: 900;
+  color: var(--cyan); text-shadow: var(--glow); display: block;
+}
+.stat-desc {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  color: var(--text-dim); letter-spacing: 1px; margin-top: 6px; display: block;
+}
+
+/* Blok kode */
+.code-block {
+  background: #0a0f1e; border: 1px solid var(--border);
+  padding: 20px 24px; margin: 24px 0; overflow-x: auto;
+  font-family: 'JetBrains Mono', monospace; font-size: 13px;
+  color: #a5b4fc; line-height: 1.7;
+}
+
+/* Tags */
+.article-tags {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border);
+}
+.article-tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1px;
+  padding: 5px 14px; border: 1px solid var(--border); color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+/* Navigasi artikel */
+.article-nav {
+  display: flex; justify-content: space-between;
+  margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border);
+  gap: 16px; flex-wrap: wrap;
+}
+.article-nav a {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px;
+  color: var(--text-dim); text-decoration: none; padding: 12px 20px;
+  border: 1px solid var(--border); background: var(--card); transition: all 0.3s;
+  text-transform: uppercase;
+}
+.article-nav a:hover { color: var(--cyan); border-color: var(--cyan); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  article { padding: 110px 20px 80px; }
+  h1.article-title { font-size: 22px; }
+  .stat-grid { grid-template-columns: 1fr 1fr; }
+}

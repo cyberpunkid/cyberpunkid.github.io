@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10 Pengaturan Keamanan yang Harus Aktif di Android Anda Sekarang — CyberpunkID</title>
+<meta name="description" content="Ponsel Android Anda mungkin belum seaman yang Anda kira. Aktifkan 10 pengaturan ini sekarang untuk perlindungan maksimal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@400;600;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/article.css">
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+<div class="reading-progress-bar" id="reading-progress"></div>
+<canvas id="starfield"></canvas>
+<div class="grid-overlay"></div>
+<div class="scanline"></div>
+<nav>
+  <div class="nav-logo">
+    <a href="../index.html" style="text-decoration:none;color:inherit" class="nav-logo-text">Cyber<span>_</span>PunkID</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="../index.html"><span data-i18n="nav_home">Beranda</span></a></li>
+    <li><a href="../works.html" class="active"><span data-i18n="nav_works">Tulisan</span></a></li>
+    <li><a href="../about.html"><span data-i18n="nav_about">Tentang</span></a></li>
+  </ul>
+  <button class="lang-toggle" onclick="toggleLang()" aria-label="Ganti bahasa">
+    <span data-lang="id" class="lang-active">ID</span><span class="lang-sep">|</span><span data-lang="en">EN</span>
+  </button>
+</nav>
+<article>
+  <div class="article-meta">
+    <span class="article-category" id="art-cat">Tips &amp; Trik</span>
+    <span class="article-date" id="art-date">10 April 2026</span>
+    <span class="article-read-time" id="art-time">· 8 Menit Baca</span>
+  </div>
+  <h1 class="article-title" id="art-title">10 Pengaturan Keamanan yang Harus Aktif di Android Anda Sekarang</h1>
+  <p class="article-lead" id="art-lead">Ponsel Android Anda menyimpan password, data perbankan, foto pribadi, dan percakapan rahasia — tapi mungkin belum seaman yang Anda kira. Aktifkan 10 pengaturan ini sekarang, tanpa perlu keahlian teknis.</p>
+  <div class="article-divider"><span id="art-divider">// MULAI TRANSMISI</span></div>
+
+  <div class="article-body" id="body-id">
+    <h2>Android Aman? Tidak Otomatis</h2>
+    <p>Android adalah sistem operasi mobile yang paling banyak digunakan di dunia — dan karenanya, juga yang paling banyak diserang. Banyak pengguna tidak menyadari bahwa default settings Android tidak selalu dikonfigurasi untuk keamanan maksimal. Beberapa pengaturan kritis harus diaktifkan secara manual.</p>
+    <p>Panduan ini menggunakan referensi Android stock (Pixel/AOSP). Letak menu mungkin sedikit berbeda di Samsung (One UI), Xiaomi (MIUI), atau brand lain, tapi nama pengaturannya sama.</p>
+
+    <h2>1. Aktifkan Google Play Protect</h2>
+    <p>Play Protect adalah antivirus bawaan Android dari Google yang memindai semua aplikasi secara otomatis.</p>
+    <p><strong>Cara aktifkan:</strong> Buka Play Store → tap foto profil → Play Protect → Aktifkan <em>"Scan apps with Play Protect"</em> dan <em>"Improve harmful app detection"</em>.</p>
+
+    <h2>2. Nonaktifkan "Install dari Sumber Tidak Dikenal"</h2>
+    <p>Pengaturan ini, jika aktif, mengizinkan instalasi APK dari luar Play Store — yang merupakan pintu masuk utama malware di Android.</p>
+    <p><strong>Cara cek:</strong> Settings → Apps → tap titik tiga di kanan atas → Special app access → Install unknown apps → Pastikan semua aplikasi dalam kondisi "Not allowed".</p>
+
+    <div class="callout callout-warning">
+      <div class="callout-label">// Perhatian</div>
+      <p>Jika Anda pernah install APK dari WhatsApp atau situs web, browser atau WhatsApp Anda mungkin masih punya izin untuk install app dari sumber tidak dikenal. Periksa dan cabut izin tersebut sekarang.</p>
+    </div>
+
+    <h2>3. Audit Izin Aplikasi (App Permissions)</h2>
+    <p>Banyak aplikasi meminta izin yang jauh melebihi kebutuhan fungsionalnya. Aplikasi senter yang meminta akses kontak, atau game yang meminta akses SMS — ini tanda-tanda aplikasi bermasalah.</p>
+    <p><strong>Cara audit:</strong> Settings → Privacy → Permission Manager → Review setiap kategori (Location, Camera, Microphone, Contacts, SMS) dan cabut izin yang tidak relevan.</p>
+    <p>Perhatian khusus pada:</p>
+    <ul>
+      <li><strong>Microphone & Camera</strong> — hanya aplikasi yang memang butuh (kamera, video call) yang boleh punya akses</li>
+      <li><strong>Location</strong> — set ke "Only while using the app", bukan "Always"</li>
+      <li><strong>SMS</strong> — hanya aplikasi pesan default yang perlu akses SMS. Aplikasi lain yang meminta ini sangat mencurigakan</li>
+      <li><strong>Accessibility</strong> — izin ini sangat powerful dan sering disalahgunakan malware. Hanya beri ke app yang benar-benar membutuhkan</li>
+    </ul>
+
+    <h2>4. Gunakan Screen Lock yang Kuat</h2>
+    <p>PIN 4 digit dapat dibobol dalam hitungan menit. Gunakan PIN minimal 6 digit, atau lebih baik lagi, passphrase (kata sandi berupa kalimat pendek yang mudah diingat tapi sulit ditebak).</p>
+    <p><strong>Cara set:</strong> Settings → Security → Screen Lock → pilih PIN (6 digit) atau Password. Aktifkan juga biometric (fingerprint/face) sebagai cara buka cepat, tapi pastikan PIN/password juga kuat sebagai fallback.</p>
+    <p>Aktifkan <strong>auto-lock</strong> setelah 30 detik atau 1 menit tidak digunakan.</p>
+
+    <h2>5. Enkripsi Perangkat</h2>
+    <p>Enkripsi memastikan data di ponsel Anda tidak dapat diakses tanpa screen lock, bahkan jika seseorang mengambil chip memori ponsel Anda secara fisik. Pada Android modern (Android 6+), enkripsi biasanya sudah aktif secara default.</p>
+    <p><strong>Cara cek:</strong> Settings → Security → Encryption & credentials → pastikan "Phone is encrypted" atau "Encrypted".</p>
+
+    <h2>6. Aktifkan Find My Device</h2>
+    <p>Fitur ini memungkinkan Anda melacak, mengunci, atau menghapus data ponsel dari jarak jauh jika hilang atau dicuri.</p>
+    <p><strong>Cara aktifkan:</strong> Settings → Security → Find My Device → aktifkan. Pastikan Location juga aktif. Test di <strong>android.com/find</strong> untuk memastikan berfungsi.</p>
+
+    <h2>7. Update OS dan Aplikasi Secara Rutin</h2>
+    <p>Pembaruan keamanan Android menutup celah (vulnerability) yang ditemukan. Penyerang aktif mengeksploitasi celah pada versi lama. Google merilis security patch bulanan — pastikan ponsel Anda selalu update.</p>
+    <p><strong>Cara cek:</strong> Settings → System → System update. Juga aktifkan auto-update di Play Store: Play Store → Profile → Settings → Network preferences → Auto-update apps.</p>
+
+    <h2>8. Aktifkan Autentikasi Dua Faktor di Akun Google</h2>
+    <p>Akun Google adalah inti dari ekosistem Android Anda. Jika akun Google diretas, penyerang bisa mengakses backup data, email, bahkan reset akun lain. Aktifkan MFA di myaccount.google.com seperti yang dijelaskan di artikel terpisah kami.</p>
+
+    <h2>9. Nonaktifkan Developer Options (Jika Tidak Dibutuhkan)</h2>
+    <p>Developer Options berisi pengaturan tingkat lanjut yang bisa disalahgunakan jika ponsel Anda diakses orang lain. Jika Anda bukan developer, nonaktifkan fitur ini.</p>
+    <p><strong>Cara nonaktifkan:</strong> Settings → System → Developer Options → nonaktifkan toggle di bagian atas. Jika menu Developer Options tidak ada, berarti sudah nonaktif.</p>
+    <p>Pastikan juga <strong>USB Debugging</strong> dalam kondisi <em>off</em> — fitur ini memungkinkan akses penuh ke perangkat via kabel USB dan sangat berbahaya jika aktif di luar kebutuhan development.</p>
+
+    <h2>10. Gunakan DNS Privat</h2>
+    <p>DNS Privat mengenkripsi query DNS Anda, mencegah ISP atau penyerang di jaringan yang sama memantau situs apa yang Anda kunjungi. Android 9+ mendukung DNS over TLS secara native.</p>
+    <p><strong>Cara aktifkan:</strong> Settings → Network & Internet → Advanced → Private DNS → pilih <em>"Private DNS provider hostname"</em> → masukkan salah satu:</p>
+    <div class="code-block">
+dns.google         (Google DNS)
+one.one.one.one    (Cloudflare DNS - direkomendasikan)
+dns.quad9.net      (Quad9 - fokus keamanan, memblokir domain berbahaya)
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">// Rekomendasi</div>
+      <p>Quad9 (dns.quad9.net) adalah pilihan terbaik untuk keamanan ekstra karena secara otomatis memblokir domain yang diketahui berbahaya — termasuk domain phishing dan malware command-and-control.</p>
+    </div>
+
+    <h2>Checklist Cepat</h2>
+    <ol>
+      <li>✅ Play Protect aktif</li>
+      <li>✅ Install unknown apps: semua "Not allowed"</li>
+      <li>✅ Izin app: sudah diaudit dan dibatasi</li>
+      <li>✅ Screen lock: PIN 6 digit atau passphrase</li>
+      <li>✅ Enkripsi: aktif</li>
+      <li>✅ Find My Device: aktif</li>
+      <li>✅ OS dan app: update terbaru</li>
+      <li>✅ Google Account MFA: aktif</li>
+      <li>✅ USB Debugging: nonaktif</li>
+      <li>✅ Private DNS: one.one.one.one atau dns.quad9.net</li>
+    </ol>
+  </div>
+
+  <div class="article-body" id="body-en" style="display:none">
+    <h2>Android Is Not Automatically Secure</h2>
+    <p>Android is the most widely used mobile OS in the world — and therefore the most targeted. Many users don't realize that Android's default settings aren't always configured for maximum security. Several critical settings must be manually enabled.</p>
+    <p>This guide references stock Android (Pixel/AOSP). Menu locations may differ slightly on Samsung (One UI), Xiaomi (MIUI), or other brands, but setting names are the same.</p>
+
+    <h2>The 10 Settings to Activate Now</h2>
+
+    <h3>1. Enable Google Play Protect</h3>
+    <p>Play Protect → Open Play Store → profile photo → Play Protect → Enable "Scan apps with Play Protect" and "Improve harmful app detection."</p>
+
+    <h3>2. Disable "Install from Unknown Sources"</h3>
+    <p>Settings → Apps → three dots → Special app access → Install unknown apps → Ensure all apps show "Not allowed."</p>
+
+    <div class="callout callout-warning">
+      <div class="callout-label">// Warning</div>
+      <p>If you've ever installed APKs from WhatsApp or websites, your browser or WhatsApp may still have permission to install apps from unknown sources. Check and revoke that permission now.</p>
+    </div>
+
+    <h3>3. Audit App Permissions</h3>
+    <p>Settings → Privacy → Permission Manager → Review each category (Location, Camera, Microphone, Contacts, SMS) and revoke permissions that aren't relevant. Set Location to "Only while using the app." Only your default messaging app should have SMS access.</p>
+
+    <h3>4. Use a Strong Screen Lock</h3>
+    <p>Use a minimum 6-digit PIN or passphrase. Enable auto-lock after 30 seconds to 1 minute of inactivity.</p>
+
+    <h3>5. Verify Device Encryption</h3>
+    <p>Settings → Security → Encryption & credentials → ensure "Phone is encrypted" is shown. Most Android 6+ devices are encrypted by default.</p>
+
+    <h3>6. Enable Find My Device</h3>
+    <p>Settings → Security → Find My Device → enable. Test at <strong>android.com/find</strong>.</p>
+
+    <h3>7. Keep OS and Apps Updated</h3>
+    <p>Settings → System → System update. Enable auto-update in Play Store settings.</p>
+
+    <h3>8. Enable MFA on Your Google Account</h3>
+    <p>Visit myaccount.google.com and enable 2-Step Verification. Your Google account is the core of your Android ecosystem.</p>
+
+    <h3>9. Disable Developer Options and USB Debugging</h3>
+    <p>Settings → System → Developer Options → toggle off at the top. Ensure USB Debugging is off — it enables full device access via USB cable.</p>
+
+    <h3>10. Enable Private DNS</h3>
+    <p>Settings → Network & Internet → Advanced → Private DNS → hostname:</p>
+    <div class="code-block">
+one.one.one.one    (Cloudflare - recommended)
+dns.quad9.net      (Quad9 - blocks malicious domains)
+    </div>
+
+    <h2>Quick Checklist</h2>
+    <ol>
+      <li>✅ Play Protect: enabled</li>
+      <li>✅ Unknown sources: all "Not allowed"</li>
+      <li>✅ App permissions: audited and limited</li>
+      <li>✅ Screen lock: 6-digit PIN or passphrase</li>
+      <li>✅ Encryption: active</li>
+      <li>✅ Find My Device: enabled</li>
+      <li>✅ OS and apps: latest update</li>
+      <li>✅ Google Account MFA: enabled</li>
+      <li>✅ USB Debugging: disabled</li>
+      <li>✅ Private DNS: configured</li>
+    </ol>
+  </div>
+
+  <div class="article-tags">
+    <span class="article-tag">android-security</span>
+    <span class="article-tag">mobile-safety</span>
+    <span class="article-tag">privacy</span>
+    <span class="article-tag">mfa</span>
+  </div>
+  <div class="article-nav"><a href="../works.html" id="nav-back">← Semua Tulisan</a></div>
+</article>
+<script src="../assets/js/content.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+const _base = applyLang;
+applyLang = function(lang) {
+  _base(lang);
+  const isID = lang === 'id';
+  document.getElementById('body-id').style.display = isID ? '' : 'none';
+  document.getElementById('body-en').style.display = isID ? 'none' : '';
+  document.getElementById('art-cat').textContent = isID ? 'Tips & Trik' : 'Tips & Tricks';
+  document.getElementById('art-date').textContent = isID ? '10 April 2026' : 'April 10, 2026';
+  document.getElementById('art-time').textContent = isID ? '· 8 Menit Baca' : '· 8 Min Read';
+  document.getElementById('art-title').textContent = isID ? '10 Pengaturan Keamanan yang Harus Aktif di Android Anda Sekarang' : '10 Security Settings You Must Enable on Your Android Right Now';
+  document.getElementById('art-lead').textContent = isID ? 'Ponsel Android Anda menyimpan password, data perbankan, foto pribadi — tapi mungkin belum seaman yang Anda kira. Aktifkan 10 pengaturan ini sekarang.' : 'Your Android phone stores passwords, banking data, and private photos — but may not be as secure as you think. Enable these 10 settings now.';
+  document.getElementById('art-divider').textContent = isID ? '// MULAI TRANSMISI' : '// BEGIN TRANSMISSION';
+  document.getElementById('nav-back').textContent = isID ? '← Semua Tulisan' : '← All Articles';
+  document.title = isID ? '10 Pengaturan Keamanan Android — CyberpunkID' : '10 Android Security Settings — CyberpunkID';
+};
+</script>
+</body>
+</html>

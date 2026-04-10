@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cara Mengaktifkan Multi-Factor Authentication di Akun Penting Anda — CyberpunkID</title>
+<meta name="description" content="Panduan langkah demi langkah mengaktifkan MFA di Gmail, Instagram, WhatsApp, dan marketplace. Lakukan sekarang, bukan nanti.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@400;600;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/article.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+<div class="reading-progress-bar" id="reading-progress"></div>
+<canvas id="starfield"></canvas>
+<div class="grid-overlay"></div>
+<div class="scanline"></div>
+
+<nav>
+  <div class="nav-logo">
+    <a href="../index.html" style="text-decoration:none;color:inherit" class="nav-logo-text">
+      Cyber<span>_</span>PunkID
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="../index.html"><span data-i18n="nav_home">Beranda</span></a></li>
+    <li><a href="../works.html" class="active"><span data-i18n="nav_works">Tulisan</span></a></li>
+    <li><a href="../about.html"><span data-i18n="nav_about">Tentang</span></a></li>
+  </ul>
+  <button class="lang-toggle" onclick="toggleLang()" aria-label="Ganti bahasa">
+    <span data-lang="id" class="lang-active">ID</span>
+    <span class="lang-sep">|</span>
+    <span data-lang="en">EN</span>
+  </button>
+</nav>
+
+<article>
+
+  <div class="article-meta">
+    <span class="article-category" id="art-cat">Panduan</span>
+    <span class="article-date" id="art-date">10 April 2026</span>
+    <span class="article-read-time" id="art-time">· 10 Menit Baca</span>
+  </div>
+
+  <h1 class="article-title" id="art-title">
+    Cara Mengaktifkan Multi-Factor Authentication di Akun Penting Anda
+  </h1>
+
+  <p class="article-lead" id="art-lead">
+    MFA adalah satu tindakan yang paling signifikan dampaknya untuk keamanan akun Anda. Panduan praktis ini memandu Anda langkah demi langkah untuk Gmail, Instagram, WhatsApp, dan marketplace Indonesia.
+  </p>
+
+  <div class="article-divider"><span id="art-divider">// MULAI TRANSMISI</span></div>
+
+  <div class="article-body" id="body-id">
+
+    <h2>Mengapa MFA Adalah Prioritas Utama?</h2>
+    <p>Multi-Factor Authentication (MFA), atau yang sering disebut verifikasi dua langkah, adalah lapisan keamanan tambahan yang memastikan hanya Anda yang bisa mengakses akun — bahkan jika password Anda sudah dicuri. Ketika MFA aktif, penyerang yang berhasil mendapatkan password Anda tetap tidak bisa masuk tanpa kode verifikasi yang ada di perangkat Anda.</p>
+
+    <div class="callout">
+      <div class="callout-label">// Sebelum Mulai</div>
+      <p>Install aplikasi autentikator terlebih dahulu. Rekomendasi: <strong>Google Authenticator</strong>, <strong>Microsoft Authenticator</strong>, atau <strong>Authy</strong>. Ketiganya gratis dan tersedia di Play Store maupun App Store. Authenticator app jauh lebih aman daripada MFA via SMS.</p>
+    </div>
+
+    <h2>1. Gmail / Google Account</h2>
+    <p>Akun Google adalah yang paling penting untuk dilindungi — karena sering digunakan sebagai login untuk ratusan layanan lain.</p>
+    <ol>
+      <li>Buka <strong>myaccount.google.com</strong> di browser</li>
+      <li>Pilih menu <strong>Keamanan</strong> (Security) di sidebar kiri</li>
+      <li>Scroll ke bagian <strong>"Cara Anda login ke Google"</strong></li>
+      <li>Klik <strong>"Verifikasi 2 langkah"</strong> → Klik tombol <strong>Mulai</strong></li>
+      <li>Ikuti wizard — Google akan menawarkan beberapa metode</li>
+      <li>Pilih <strong>"Aplikasi Authenticator"</strong> untuk keamanan maksimal</li>
+      <li>Scan QR code yang muncul menggunakan aplikasi autentikator di ponsel Anda</li>
+      <li>Masukkan kode 6 digit yang muncul di aplikasi untuk konfirmasi</li>
+      <li>Simpan <strong>kode backup</strong> yang diberikan Google di tempat aman (cetak atau simpan di password manager)</li>
+    </ol>
+
+    <div class="callout callout-warning">
+      <div class="callout-label">// Penting: Kode Backup</div>
+      <p>Google akan memberikan 10 kode backup satu kali pakai. Simpan ini di tempat aman — jika ponsel Anda hilang, ini satu-satunya cara masuk ke akun tanpa MFA. Jangan screenshot saja, cetak atau simpan di password manager.</p>
+    </div>
+
+    <h2>2. Instagram</h2>
+    <ol>
+      <li>Buka aplikasi Instagram di ponsel</li>
+      <li>Ketuk foto profil di kanan bawah → ketuk <strong>☰ (menu hamburger)</strong> kanan atas</li>
+      <li>Pilih <strong>Pengaturan dan privasi</strong></li>
+      <li>Pilih <strong>Akun</strong> → <strong>Keamanan</strong></li>
+      <li>Ketuk <strong>Autentikasi Dua Faktor</strong></li>
+      <li>Pilih <strong>Aplikasi Autentikasi</strong> (bukan SMS jika memungkinkan)</li>
+      <li>Instagram akan menampilkan QR code — scan dengan aplikasi autentikator Anda</li>
+      <li>Masukkan kode 6 digit untuk konfirmasi</li>
+      <li>Instagram akan menampilkan kode pemulihan — simpan dengan aman</li>
+    </ol>
+
+    <h2>3. WhatsApp</h2>
+    <p>WhatsApp menggunakan sistem "two-step verification" dengan PIN 6 digit yang berbeda dari OTP SMS biasa.</p>
+    <ol>
+      <li>Buka WhatsApp → ketuk <strong>⋮ (tiga titik)</strong> di kanan atas</li>
+      <li>Pilih <strong>Pengaturan</strong> → <strong>Akun</strong></li>
+      <li>Ketuk <strong>Verifikasi dua langkah</strong></li>
+      <li>Ketuk <strong>Aktifkan</strong></li>
+      <li>Buat PIN 6 digit yang unik (bukan tanggal lahir)</li>
+      <li>Konfirmasi PIN yang sama</li>
+      <li>Masukkan alamat email sebagai fallback jika lupa PIN</li>
+      <li>Selesai — WhatsApp sekarang memerlukan PIN ini setiap kali mendaftarkan nomor ke perangkat baru</li>
+    </ol>
+
+    <div class="callout">
+      <div class="callout-label">// Kenapa WhatsApp MFA Penting?</div>
+      <p>Tanpa verifikasi dua langkah, jika seseorang bisa mengakses SMS Anda (via SIM swap atau malware), mereka bisa langsung mengambil alih akun WhatsApp Anda. Dengan PIN aktif, mereka tetap tidak bisa masuk meski dapat OTP SMS-nya.</p>
+    </div>
+
+    <h2>4. Tokopedia</h2>
+    <ol>
+      <li>Buka aplikasi Tokopedia → ketuk ikon <strong>Akun</strong> di kanan bawah</li>
+      <li>Ketuk <strong>⚙ Pengaturan</strong> di kanan atas</li>
+      <li>Pilih <strong>Keamanan</strong></li>
+      <li>Ketuk <strong>Verifikasi 2 Langkah</strong></li>
+      <li>Pilih metode: <strong>Authenticator App</strong> atau PIN</li>
+      <li>Ikuti instruksi untuk menghubungkan authenticator app</li>
+    </ol>
+
+    <h2>5. Shopee</h2>
+    <ol>
+      <li>Buka Shopee → ketuk <strong>Saya</strong> di kanan bawah</li>
+      <li>Ketuk <strong>⚙</strong> di kanan atas → pilih <strong>Keamanan</strong></li>
+      <li>Pilih <strong>Verifikasi 2 Langkah</strong></li>
+      <li>Aktifkan dan ikuti proses setup</li>
+      <li>Shopee mendukung SMS OTP dan authenticator app</li>
+    </ol>
+
+    <h2>Apa Selanjutnya Setelah MFA Aktif?</h2>
+    <p>Setelah mengaktifkan MFA di akun-akun utama, lakukan langkah berikut untuk keamanan yang lebih komprehensif:</p>
+    <ul>
+      <li><strong>Review sesi aktif</strong> — di Google dan Instagram, cek perangkat mana saja yang sedang login. Keluarkan perangkat yang tidak dikenali</li>
+      <li><strong>Aktifkan notifikasi login</strong> — aktifkan alert jika ada login baru dari perangkat atau lokasi tidak dikenal</li>
+      <li><strong>Backup kode pemulihan</strong> — simpan semua kode backup di password manager atau cetak dan simpan di tempat aman fisik</li>
+      <li><strong>Jangan share kode MFA</strong> — tidak ada layanan resmi yang akan pernah meminta kode OTP atau kode autentikator Anda</li>
+    </ul>
+
+    <h2>MFA Bukan Peluru Perak, Tapi Sangat Membantu</h2>
+    <p>MFA tidak 100% kebal — serangan seperti <em>real-time phishing proxy</em> bisa meneruskan kode MFA secara langsung. Tapi MFA tetap memblokir >99% serangan otomatis dan massal. Untuk sebagian besar pengguna, ini adalah upgrade keamanan paling berdampak yang bisa dilakukan dalam 10 menit.</p>
+
+  </div>
+
+  <div class="article-body" id="body-en" style="display:none">
+
+    <h2>Why MFA Is the Top Priority?</h2>
+    <p>Multi-Factor Authentication (MFA), often called two-step verification, is an additional security layer that ensures only you can access your account — even if your password is stolen. With MFA active, an attacker who obtains your password still can't get in without a verification code from your device.</p>
+
+    <div class="callout">
+      <div class="callout-label">// Before You Start</div>
+      <p>Install an authenticator app first. Recommended: <strong>Google Authenticator</strong>, <strong>Microsoft Authenticator</strong>, or <strong>Authy</strong>. All are free and available on the Play Store and App Store. Authenticator apps are far more secure than SMS-based MFA.</p>
+    </div>
+
+    <h2>1. Gmail / Google Account</h2>
+    <p>Your Google account is the most important to protect — it's often used to log in to hundreds of other services.</p>
+    <ol>
+      <li>Open <strong>myaccount.google.com</strong> in your browser</li>
+      <li>Select <strong>Security</strong> from the left sidebar</li>
+      <li>Scroll to the <strong>"How you sign in to Google"</strong> section</li>
+      <li>Click <strong>"2-Step Verification"</strong> → Click the <strong>Get Started</strong> button</li>
+      <li>Follow the wizard — Google will offer several methods</li>
+      <li>Choose <strong>"Authenticator App"</strong> for maximum security</li>
+      <li>Scan the QR code using your authenticator app on your phone</li>
+      <li>Enter the 6-digit code shown in the app to confirm</li>
+      <li>Save the <strong>backup codes</strong> Google provides in a safe place (print or save in a password manager)</li>
+    </ol>
+
+    <div class="callout callout-warning">
+      <div class="callout-label">// Important: Backup Codes</div>
+      <p>Google will provide 10 single-use backup codes. Store these safely — if your phone is lost, these are the only way to access your account without MFA. Don't just screenshot them; print or save in a password manager.</p>
+    </div>
+
+    <h2>2. Instagram</h2>
+    <ol>
+      <li>Open the Instagram app on your phone</li>
+      <li>Tap your profile photo bottom right → tap <strong>☰ (hamburger menu)</strong> top right</li>
+      <li>Select <strong>Settings and privacy</strong></li>
+      <li>Select <strong>Account</strong> → <strong>Security</strong></li>
+      <li>Tap <strong>Two-Factor Authentication</strong></li>
+      <li>Choose <strong>Authentication App</strong> (not SMS if possible)</li>
+      <li>Instagram will display a QR code — scan it with your authenticator app</li>
+      <li>Enter the 6-digit code to confirm</li>
+      <li>Instagram will show recovery codes — save them safely</li>
+    </ol>
+
+    <h2>3. WhatsApp</h2>
+    <p>WhatsApp uses a "two-step verification" system with a 6-digit PIN different from the regular SMS OTP.</p>
+    <ol>
+      <li>Open WhatsApp → tap <strong>⋮ (three dots)</strong> top right</li>
+      <li>Select <strong>Settings</strong> → <strong>Account</strong></li>
+      <li>Tap <strong>Two-step verification</strong></li>
+      <li>Tap <strong>Enable</strong></li>
+      <li>Create a unique 6-digit PIN (not your birthday)</li>
+      <li>Confirm the same PIN</li>
+      <li>Enter an email address as a fallback if you forget your PIN</li>
+      <li>Done — WhatsApp now requires this PIN every time your number is registered on a new device</li>
+    </ol>
+
+    <h2>4 & 5. Marketplace Apps</h2>
+    <p>For Tokopedia, Shopee, and similar apps, go to <strong>Settings → Security → Two-Step Verification</strong>. Enable it and choose an authenticator app when available over SMS. The exact path varies slightly by app version but the option is always within the Security menu.</p>
+
+    <div class="callout">
+      <div class="callout-label">// After Enabling MFA</div>
+      <p>Review active sessions, enable login notifications, and store all backup codes in a password manager. Never share MFA codes — no legitimate service will ever ask for your OTP or authenticator code.</p>
+    </div>
+
+    <h2>MFA Is Not a Silver Bullet, But It Helps Enormously</h2>
+    <p>MFA isn't 100% foolproof — attacks like <em>real-time phishing proxies</em> can forward MFA codes in real time. But MFA still blocks over 99% of automated and mass attacks. For most users, this is the highest-impact security upgrade you can make in 10 minutes.</p>
+
+  </div>
+
+  <div class="article-tags">
+    <span class="article-tag">mfa</span>
+    <span class="article-tag">account-security</span>
+    <span class="article-tag">password-security</span>
+    <span class="article-tag">privacy</span>
+  </div>
+
+  <div class="article-nav">
+    <a href="../works.html" id="nav-back">← Semua Tulisan</a>
+  </div>
+
+</article>
+
+<script src="../assets/js/content.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+const _base = applyLang;
+applyLang = function(lang) {
+  _base(lang);
+  const isID = lang === 'id';
+  document.getElementById('body-id').style.display = isID ? '' : 'none';
+  document.getElementById('body-en').style.display = isID ? 'none' : '';
+  document.getElementById('art-cat').textContent  = isID ? 'Panduan' : 'Guide';
+  document.getElementById('art-date').textContent = isID ? '10 April 2026' : 'April 10, 2026';
+  document.getElementById('art-time').textContent = isID ? '· 10 Menit Baca' : '· 10 Min Read';
+  document.getElementById('art-title').textContent = isID
+    ? 'Cara Mengaktifkan Multi-Factor Authentication di Akun Penting Anda'
+    : 'How to Enable Multi-Factor Authentication on Your Important Accounts';
+  document.getElementById('art-lead').textContent = isID
+    ? 'MFA adalah satu tindakan yang paling signifikan dampaknya untuk keamanan akun Anda. Panduan praktis ini memandu Anda langkah demi langkah untuk Gmail, Instagram, WhatsApp, dan marketplace Indonesia.'
+    : 'MFA is the single most impactful action for your account security. This practical guide walks you step by step through Gmail, Instagram, WhatsApp, and major marketplaces.';
+  document.getElementById('art-divider').textContent = isID ? '// MULAI TRANSMISI' : '// BEGIN TRANSMISSION';
+  document.getElementById('nav-back').textContent    = isID ? '← Semua Tulisan' : '← All Articles';
+  document.title = isID
+    ? 'Cara Mengaktifkan MFA di Akun Penting Anda — CyberpunkID'
+    : 'How to Enable MFA on Your Important Accounts — CyberpunkID';
+};
+</script>
+</body>
+</html>
